@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Каталог &mdash; Погнали</title>
+</head>
+<body class="page__body">
+  <header class="page-header">
+    <nav class="page-header__main-nav  main-nav">
+      <a class="main-nav__logo  logo" href="index.html">Погнали?</a>
+      <button class="main-nav__btn  btn  btn--hamburger">Меню</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Попутчики</h1>
+
+    <section class="sorting-by-countries">
+      <h2 class="sorting-by-countries__title">Фильтрация по странам:</h2>
+      <button class="sorting-by-countries__btn  btn  btn--sort-by-countries-open">Показать</button>
+    </section>
+
+    <section class="sorting-by-person">
+      <h2 class="sorting-by-person__title">Подберите идеального попутчика</h2>
+      <form class="sorting-by-person__list" action="https://echo.htmlacademy.ru" method="post" oninput="leveloutput.value=levelcount.value">
+        <div class="sorting-by-person__item  person-hobby">
+          <button class="person-hobby__btn  btn  btn--sorting-by-person-item" type="button">Хобби</button>
+        </div>
+        <div class="sorting-by-person__item  person-music">
+          <button class="person-music__btn  btn  btn--sorting-by-person-item" type="button">Музыка</button>
+          <div class="person-music__list">
+            <div class="person-music__item  person-music__item--plane">
+              <input class="person-music__input" id="hard-rock" type="checkbox" name="hard-rock" checked>
+              <label class="person-music__label" for="hard-rock">Тяжелый рок</label>
+            </div>
+            <div class="person-music__item  person-music__item--bus">
+              <input class="person-music__input" id="russian-rap" type="checkbox" name="russian-rap" checked>
+              <label class="person-music__label" for="russian-rap">Русский рэп</label>
+            </div>
+            <div class="person-music__item  person-music__item--bicycle">
+              <input class="person-music__input" id="eurodance" type="checkbox" name="eurodance">
+              <label class="person-music__label" for="eurodance">Евроденс</label>
+            </div>
+          </div>
+        </div>
+        <div class="sorting-by-person__item  person-food">
+          <button class="person-food__btn  btn  btn--sorting-by-person-item" type="button">Еда</button>
+        </div>
+        <div class="sorting-by-person__item  person-ways">
+          <button class="person-ways__btn  btn  btn--sorting-by-person-item" type="button">Транспорт</button>
+          <div class="person-ways__list">
+            <div class="person-ways__item  person-ways__item--plane">
+              <input class="person-ways__input" id="plane" type="checkbox" name="plane" checked>
+              <label class="person-ways__label" for="plane">Самолет</label>
+            </div>
+            <div class="person-ways__item  person-ways__item--bus">
+              <input class="person-ways__input" id="bus" type="checkbox" name="bus">
+              <label class="person-ways__label" for="bus">Автобус</label>
+            </div>
+            <div class="person-ways__item  person-ways__item--bicycle">
+              <input class="person-ways__input" id="bicycle" type="checkbox" name="bicycle" checked>
+              <label class="person-ways__label" for="bicycle">Велосипед</label>
+            </div>
+            <div class="person-ways__item  person-ways__item--afoot">
+              <input class="person-ways__input" id="afoot" type="checkbox" name="afoot" checked>
+              <label class="person-ways__label" for="afoot">Без транспорта</label>
+            </div>
+          </div>
+        </div>
+        <div class="sorting-by-person__item  person-level">
+          <button class="person-level__btn  btn  btn--sorting-by-person-item" type="button">Левел</button>
+          <div class="person-level__group">
+            <output class="person-level__output" name="leveloutput">30</output>
+            <input class="person-level__input" id="levelcount" type="range" min="0" max="100" value="30" name="levelcount">
+          </div>
+        </div>
+        <button class="sorting-by-person__btn  btn  sorting-by-person-form" type="submit">Показать</button>
+      </form>
+    </section>
+
+    <section class="catalog">
+      <h2>Каталог</h2>
+      <div class="catalog__list">
+        <article class="catalog__item  traveler">
+          <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Таня Фирсова">
+          <h3 class="traveler__name">Таня Фирсова</h3>
+          <span class="traveler__status  status  status--offline">Офлайн</span>
+          <span class="traveler__popularity">1,5 М</span>
+          <p class="traveler__hashtags  hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <div class="traveler__flags  traveler-countries">
+            <h4 class="traveler-countries__title">Хочет посетить:</h4>
+            <div class="traveler-countries__list  flags">
+              <span class="flags__link  flags__link--lk">Шри-Ланка</span>
+              <span class="flags__link  flags__link--th">Таиланд</span>
+              <span class="flags__link  flags__link--sc">Сейшелы</span>
+            </div>
+          </div>
+          <div class="traveler__ways  traveler-ways">
+            <h4 class="traveler-ways__title">Транспорт:</h4>
+            <div class="traveler-ways__list  ways">
+              <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
+              <span class="ways__link  ways__link--bus">Автобус</span>
+              <span class="ways__link  ways__link--bicycle">Велосипед</span>
+              <span class="ways__link  ways__link--afoot">Без транспорта</span>
+            </div>
+          </div>
+          <div class="traveler__level  level">
+            <span class="level__title">Левел:</span>
+            <span class="level__value">99</span>
+          </div>
+          <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
+        </article>
+        <article class="catalog__item  traveler">
+          <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Петя Демин">
+          <h3 class="traveler__name">Петя Демин</h3>
+          <span class="traveler__status  status  status--offline">Офлайн</span>
+          <span class="traveler__popularity">1500</span>
+          <p class="traveler__hashtags  hashtags">#бургер #бар #футбол #концерт #крафт</p>
+          <div class="traveler__flags  traveler-countries">
+            <h4 class="traveler-countries__title">Хочет посетить:</h4>
+            <div class="traveler-countries__list  flags">
+              <span class="flags__link  flags__link--be">Бельгия</span>
+              <span class="flags__link  flags__link--cz">Чехия</span>
+            </div>
+          </div>
+          <div class="traveler__ways  traveler-ways">
+            <h4 class="traveler-ways__title">Транспорт:</h4>
+            <div class="traveler-ways__list  ways">
+              <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
+              <span class="ways__link  ways__link--bus  ways__link--active">Автобус</span>
+              <span class="ways__link  ways__link--bicycle">Велосипед</span>
+              <span class="ways__link  ways__link--afoot  ways__link--active">Без транспорта</span>
+            </div>
+          </div>
+          <div class="traveler__level  level">
+            <span class="level__title">Левел:</span>
+            <span class="level__value">80</span>
+          </div>
+          <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
+        </article>
+        <article class="catalog__item  traveler">
+          <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Марк Смолов">
+          <h3 class="traveler__name">Марк Смолов</h3>
+          <span class="traveler__status  status  status--offline">Офлайн</span>
+          <span class="traveler__popularity">170</span>
+          <p class="traveler__hashtags  hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <div class="traveler__flags  traveler-countries">
+            <h4 class="traveler-countries__title">Хочет посетить:</h4>
+            <div class="traveler-countries__list  flags">
+              <span class="flags__link  flags__link--us">США</span>
+              <span class="flags__link  flags__link--au">Австралия</span>
+              <span class="flags__link  flags__link--dm">Доминика</span>
+            </div>
+          </div>
+          <div class="traveler__ways  traveler-ways">
+            <h4 class="traveler-ways__title">Транспорт:</h4>
+            <div class="traveler-ways__list  ways">
+              <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
+              <span class="ways__link  ways__link--bus">Автобус</span>
+              <span class="ways__link  ways__link--bicycle  ways__link--active">Велосипед</span>
+              <span class="ways__link  ways__link--afoot">Без транспорта</span>
+            </div>
+          </div>
+          <div class="traveler__level  level">
+            <span class="level__title">Левел:</span>
+            <span class="level__value">25</span>
+          </div>
+          <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
+        </article>
+        <article class="catalog__item  traveler">
+          <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Лариса Роговая">
+          <h3 class="traveler__name">Лариса Роговая</h3>
+          <span class="traveler__status  status  status--online">Онлайн</span>
+          <span class="traveler__popularity">23</span>
+          <p class="traveler__hashtags  hashtags">#образование #карьера #учеба #линкедин</p>
+          <div class="traveler__flags  traveler-countries">
+            <h4 class="traveler-countries__title">Хочет посетить:</h4>
+            <div class="traveler-countries__list  flags">
+              <span class="flags__link  flags__link--uk">Великобритания</span>
+              <span class="flags__link  flags__link--de">Германия</span>
+            </div>
+          </div>
+          <div class="traveler__ways  traveler-ways">
+            <h4 class="traveler-ways__title">Транспорт:</h4>
+            <div class="traveler-ways__list  ways">
+              <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
+              <span class="ways__link  ways__link--bus  ways__link--active">Автобус</span>
+              <span class="ways__link  ways__link--bicycle">Велосипед</span>
+              <span class="ways__link  ways__link--afoot">Без транспорта</span>
+            </div>
+          </div>
+          <div class="traveler__level  level">
+            <span class="level__title">Левел:</span>
+            <span class="level__value">50</span>
+          </div>
+          <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
+        </article>
+      </div>
+      <button class="catalog__btn  btn  btn--catalog">Показать еще</button>
+      <div class="catalog__pagination  pagination">
+        <a class="pagination__link" href="#">Назад</a>
+        <a class="pagination__link" href="#">Вперед</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a class="page-footer__logo  logo" href="index.html">Погнали?</a>
+    <ul class="page-footer__social  social  social--page-footer">
+      <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
+      <li class="social__item"><a class="social__link" href="#">ВКонтакте</a></li>
+      <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
+    </ul>
+    <div class="page-footer__copyright  copyright">
+      <p class="copyright__descr">Разработано</p>
+      <a class="copyright__link" href="#">HTML Academy</a>
+    </div>
+  </footer>
+</body>
+</html>
