@@ -1,0 +1,42 @@
+.level {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: @fade_black_60;
+  border-radius: 50%;
+}
+
+.level::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 1px;
+  background-color: @basic_white;
+  opacity: 0.3;
+}
+
+.level__value {
+  order: -1;
+  margin-bottom: 5px;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: @basic_white;
+}
+
+.level__title {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: @basic_white;
+  text-transform: lowercase;
+}
