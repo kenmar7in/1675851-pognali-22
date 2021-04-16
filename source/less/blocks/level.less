@@ -6,20 +6,34 @@
   align-items: center;
   width: 60px;
   height: 60px;
-  background-color: @fade_black_60;
+  background-color: @basic_black_60;
   border-radius: 50%;
-}
 
-.level::before {
-  content: "";
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 1px;
-  background-color: @basic_white;
-  opacity: 0.3;
+  &--account {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 3px solid @special_orange;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background-color: @basic_white;
+    opacity: 0.3;
+  }
+
+  &--account::before {
+    top: 59%;
+    width: 50px;
+    background-color: @basic_blue;
+  }
 }
 
 .level__value {
@@ -30,6 +44,13 @@
   font-size: 24px;
   line-height: 24px;
   color: @basic_white;
+
+  &--account {
+    margin-bottom: 12px;
+    font-size: 38px;
+    line-height: 38px;
+    color: @basic_blue;
+  }
 }
 
 .level__title {
@@ -39,4 +60,10 @@
   line-height: 14px;
   color: @basic_white;
   text-transform: lowercase;
+
+  &--account {
+    font-size: 18px;
+    line-height: 18px;
+    color: @basic_blue;
+  }
 }
