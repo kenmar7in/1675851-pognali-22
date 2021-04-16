@@ -1,12 +1,34 @@
 .main-nav {
-  .container;
-
   padding-top: 27px;
+  background-color: @basic_white;
+
+  &--form {
+    padding-bottom: 16px;
+    background-color: @noname_blue_3;
+  }
+}
+
+.main-nav__wrapper {
+  .container;
+}
+
+.main-nav__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 .main-nav__logo {
   display: block;
   margin-bottom: 76px;
+
+  &--form {
+    color: @basic_white;
+  }
+}
+
+.main-nav__btn {
+  cursor: pointer;
 }
 
 .main-nav__list {
