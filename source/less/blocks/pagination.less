@@ -1,0 +1,29 @@
+.pagination {
+  position: relative;
+  display: flex;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: @basic_blue_light;
+  }
+}
+
+.pagination__link {
+  width: 50%;
+  height: 50px;
+  background-color: @basic_white;
+  font-size: 0;
+
+  &--back {
+    border-radius: 20px 0 0 20px;
+  }
+
+  &--next {
+    border-radius: 0 20px 20px 0;
+  }
+}
