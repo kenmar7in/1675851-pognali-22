@@ -1,0 +1,39 @@
+.ways {
+  display: flex;
+  justify-content: center;
+}
+
+.ways__link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 14px;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.15;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--plane {
+    background-image: url("../img/plane.svg");
+  }
+
+  &--bus {
+    background-image: url("../img/bus.svg");
+  }
+
+  &--bicycle {
+    background-image: url("../img/bicycle.svg");
+  }
+
+  &--afoot {
+    background-image: url("../img/afoot.svg");
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}

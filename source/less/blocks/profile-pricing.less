@@ -1,19 +1,130 @@
+.profile-pricing {
+  @media (min-width: @tablet-width) {
+    padding: 0 40px 0 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 280px 0 135px;
+  }
+}
+
 .profile-pricing__list {
   width: 200px;
-  margin-bottom: 31px;
+  margin-bottom: 28px;
   border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 100%;
+    margin-bottom: 57px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -15px;
+      width: 198px;
+      height: 285px;
+      background-color: @noname_blue_6;
+      border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -70px;
+      width: 446px;
+      height: 300px;
+    }
+  }
 }
 
 .profile-pricing__item {
   display: flex;
   flex-direction: column;
-  padding: 13px 0 18px 0;
+  padding: 10px 0 13px 0;
   border-top: 1px solid @noname_grey_2;
   border-bottom: 1px solid @noname_grey_2;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 17px 0 16px 0;
+  }
 }
 
 .profile-pricing__name {
+  position: relative;
+  margin-bottom: 2px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  &::before {
+    content: "1";
+    position: absolute;
+    top: -7px;
+    right: -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: @basic_white;
+    background-color: @special_orange;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 50%;
+      transform: translateY(-50%);
+      right: auto;
+      left: -90px;
+      width: 68px;
+      height: 68px;
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+
+  &--2 {
+    &::before {
+      content: "2";
+      background-color: @special_yellow_dark;
+    }
+  }
+
+  &--3 {
+    &::before {
+      content: "3";
+      background-color: @basic_yellow;
+    }
+  }
+}
+
+.profile-pricing__amount {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 230px;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 446px;
+  }
 }
 
 .profile-pricing__btn {
@@ -22,4 +133,9 @@
   font-size: 16px;
   line-height: 16px;
   color: @noname_blue_2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

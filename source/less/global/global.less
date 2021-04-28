@@ -21,6 +21,16 @@ img {
   width: 320px;
   margin: 0 auto;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
+    padding: 0 60px;
+  }
 }
 
 a {
@@ -30,12 +40,16 @@ a {
 
 .section-title {
   margin: 0;
-  margin-bottom: 19px;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: @special_orange;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .section-descr {
@@ -44,6 +58,11 @@ a {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .section-note {
@@ -52,4 +71,9 @@ a {
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

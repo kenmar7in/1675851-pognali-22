@@ -1,0 +1,41 @@
+.logo {
+  display: block;
+  width: 100px;
+  height: 15px;
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 164px;
+    height: 50px;
+    background-image: url("../img/logo-tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 200px;
+    height: 52px;
+    background-size: contain;
+  }
+
+  &--menu {
+    background-image: url("../img/logo-menu.svg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/logo-tablet-menu.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--page-footer {
+    margin: 0 auto;
+    background-image: url("../img/logo-menu.svg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/logo-tablet-menu.svg");
+    }
+  }
+}

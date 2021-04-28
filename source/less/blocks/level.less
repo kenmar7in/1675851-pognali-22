@@ -1,4 +1,5 @@
 .level {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,6 +8,7 @@
   width: 60px;
   height: 60px;
   background-color: @basic_black_60;
+  border: 4px solid @special_orange;
   border-radius: 50%;
 
   &--account {
@@ -28,7 +30,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 55%;
+    top: 61%;
     left: 50%;
     transform: translateX(-50%);
     width: 30px;
@@ -56,8 +58,8 @@
 }
 
 .level__value {
+  transform: translateY(2px);
   order: -1;
-  margin-bottom: 5px;
   font-family: @main-font;
   font-weight: 700;
   font-size: 24px;
@@ -80,13 +82,14 @@
     margin-bottom: 0;
     width: 45px;
     height: 45px;
-    color: @noname_blue_4;
+    color: @basic_blue_light;
     border: 3px solid @special_orange;
     border-radius: 50%;
   }
 }
 
 .level__title {
+  transform: translateY(4px);
   font-family: @main-font;
   font-weight: 400;
   font-size: 14px;
