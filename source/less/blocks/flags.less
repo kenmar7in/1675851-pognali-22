@@ -1,19 +1,54 @@
 .flags {
   display: flex;
-  flex-direction: column;
 }
 
 .flags__link {
   display: block;
-  margin-bottom: 12px;
+  width: 35px;
+  height: 24px;
+  margin-right: 20px;
   font-family: @main-font;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0;
   line-height: 16px;
   text-transform: uppercase;
-  color: @noname_blue_4;
+  color: @basic_blue_light;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &--countries-card {
+    @media (min-width: @tablet-width) {
+      width: 70px;
+      height: 47px;
+      background-size: cover;
+    }
+  }
 
   &:last-child {
-    margin-bottom: 0;
+    margin: 0;
+  }
+
+  &--th {
+    background-image: url("../img/th.svg");
+  }
+
+  &--fr {
+    background-image: url("../img/fr.svg");
+  }
+
+  &--cz {
+    background-image: url("../img/cz.svg");
+  }
+
+  &--lk {
+    background-image: url("../img/lk.svg");
+  }
+
+  &--sc {
+    background-image: url("../img/sc.svg");
+  }
+
+  &--be {
+    background-image: url("../img/be.svg");
   }
 }

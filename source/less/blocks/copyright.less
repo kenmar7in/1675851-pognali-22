@@ -1,7 +1,33 @@
 .copyright {
   border-top: 1px solid @noname_grey_3;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .copyright__descr {
   margin: 0;
+  padding-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 23px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.copyright__link {
+  display: block;
+  width: 28px;
+  height: 34px;
+  font-size: 0;
+  background-image: url("../img/academy.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+  }
 }

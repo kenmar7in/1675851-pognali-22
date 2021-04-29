@@ -7,15 +7,54 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: @noname_blue_4;
+  color: @basic_blue_light;
   text-align: left;
   background-color: @basic_yellow;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    padding: 28px 32px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
+
+  &--about {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      width: 276px;
+    }
+  }
+
   &--route {
-    padding: 19px 22px;
+    padding: 19px 20px;
     border: 3px solid @noname_blue;
+
+    @media (min-width: @tablet-width) {
+      padding: 24px 35px 25px;
+      font-size: 24px;
+      line-height: 24px;
+      border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 324px;
+    }
+  }
+
+  &--countries {
+    @media (min-width: @desktop-width) {
+      width: 275px;
+    }
+  }
+
+  &--travelers {
+    @media (min-width: @desktop-width) {
+      width: 280px;
+    }
   }
 }

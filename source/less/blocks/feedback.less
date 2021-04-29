@@ -1,63 +1,109 @@
 .feedback {
-  padding-top: 72px;
+  position: relative;
+  padding-top: 70px;
   padding-bottom: 29px;
   background-color: @noname_blue;
+  border-radius: 0 0 25px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 73px;
+    padding-bottom: 60px;
+    border-radius: 0 0 50px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 107px;
+    padding-bottom: 74px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: @noname_blue;
+
+    @media (min-width: @tablet-width) {
+      top: -60px;
+      height: 60px;
+    }
+  }
 }
 
 .feedback__wrapper {
   .container;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .feedback__title {
   .section-title;
 
+  margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .feedback__descr {
   .section-descr;
 
   width: 220px;
-  margin: 0 auto 29px;
+  margin: 0 auto 31px;
   color: @basic_white;
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 650px;
+    margin: 0 auto 62px;
+    line-height: 31px;
+  }
+
   &--margin {
-    margin-bottom: 17px;
+    margin-bottom: 19px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 40px;
+      letter-spacing: 0.01em;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.feedback__form {
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+    padding: 0 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 68px;
+    padding: 0 73px;
   }
 }
 
 .feedback__auth {
   color: @basic_yellow;
   text-decoration: underline;
-}
-
-.feedback-form__input {
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 29px;
-  padding: 21px 25px;
-  font-family: @main-font;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  border: none;
-  border-radius: 10px;
-
-  &::placeholder {
-    color: inherit;
-    opacity: 0.3;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
-
-.feedback-form__btn {
-  width: 60px;
-  margin-bottom: 29px;
-  font-size: 0;
-  cursor: pointer;
 }

@@ -1,0 +1,44 @@
+.menu-toggle {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+
+  &--closed {
+    .menu-toggle__item--open {
+      display: block;
+    }
+
+    .menu-toggle__item--close {
+      display: none;
+    }
+  }
+
+  &--opened {
+    .menu-toggle__item--open {
+      display: none;
+    }
+
+    .menu-toggle__item--close {
+      display: block;
+    }
+  }
+}
+
+.menu-toggle__item {
+  display: none;
+}

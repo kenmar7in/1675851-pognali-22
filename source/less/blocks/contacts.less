@@ -4,11 +4,45 @@
   padding: 0;
 
   &--page-header {
+    display: flex;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
+  }
+
+  &--menu {
     margin-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 112px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--feedback {
+    @media (min-width: @tablet-width) {
+      padding-left: 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: center;
+      padding-left: 110px;
+    }
   }
 }
 
 .contacts__link {
+  display: flex;
+  align-items: center;
   font-family: @main-font;
   font-weight: 700;
   font-size: 16px;
@@ -16,7 +50,103 @@
   text-transform: uppercase;
   color: @noname_blue;
 
+  &::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--page-header {
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      @media (min-width: @desktop-width) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &--menu {
+    @media (min-width: @tablet-width) {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    &::before {
+      width: 45px;
+      height: 45px;
+      margin-right: 16px;
+
+      @media (min-width: @tablet-width) {
+        width: 68px;
+        height: 68px;
+        margin-right: 23px;
+      }
+    }
+  }
+
   &--feedback {
     color: @basic_yellow;
+    line-height: 22px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 110px;
+    }
+
+    &::before {
+      width: 45px;
+      height: 45px;
+      margin-right: 16px;
+
+      @media (min-width: @tablet-width) {
+        width: 68px;
+        height: 68px;
+        margin-right: 22px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 90px;
+        height: 90px;
+        margin-right: 31px;
+      }
+    }
+  }
+
+  &--phone-1 {
+    &::before {
+      background-color: @special_orange;
+      background-image: url("../img/phone-1.svg");
+    }
+  }
+
+  &--email-1 {
+    &::before {
+      background-color: @special_yellow_dark;
+      background-image: url("../img/email-1.svg");
+    }
+  }
+
+  &--phone-2 {
+    &::before {
+      background-color: @noname_blue_7;
+      background-image: url("../img/phone-2.svg");
+    }
+  }
+
+  &--email-2 {
+    &::before {
+      background-color: @noname_blue_7;
+      background-image: url("../img/email-2.svg");
+    }
   }
 }

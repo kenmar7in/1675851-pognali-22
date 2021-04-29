@@ -1,27 +1,87 @@
 .travelers {
-  padding-top: 68px;
+  position: relative;
+  padding-top: 65px;
   padding-bottom: 31px;
   background-color: @noname_blue;
+  border-radius: 0 0 25px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 138px;
+    padding-bottom: 85px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 127px;
+    padding-bottom: 134px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -25px;
+    width: 100%;
+    height: 25px;
+    background-color: @noname_blue;
+
+    @media (min-width: @tablet-width) {
+      top: -60px;
+      height: 60px;
+    }
+  }
 }
 
 .travelers__wrapper {
   .container;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding: 0 70px;
+  }
 }
 
 .travelers__group {
-  margin-bottom: 54px;
-  padding: 0 25px;
+  margin-bottom: 56px;
+}
+
+.travelers__content {
+  padding: 0 15px 0 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 430px;
+    padding: 0;
+  }
 }
 
 .travelers__title {
   .section-title;
+
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .travelers__descr {
   .section-descr;
 
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+    line-height: 34px;
+  }
 }
 
 .travelers__note {
@@ -29,10 +89,37 @@
 
   display: block;
   color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
 }
 
 .travelers__list {
   list-style: none;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+}
+
+.travelers__item {
+  @media (min-width: @desktop-width) {
+    margin-right: 60px;
+  }
 }
