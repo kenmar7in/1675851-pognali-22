@@ -14,10 +14,6 @@
       display: none;
     }
   }
-
-  &--page-footer {
-    margin-bottom: 37px;
-  }
 }
 
 .social__link {
@@ -29,13 +25,13 @@
   background-position: 50% 50%;
   border-radius: 50%;
 
+  @media (min-width: @tablet-width) {
+    width: 62px;
+    height: 62px;
+  }
+
   &--page-header {
     background-color: transparent;
-
-    @media (min-width: @tablet-width) {
-      width: 62px;
-      height: 62px;
-    }
   }
 
   &--fb {
@@ -64,11 +60,5 @@
 
   &--page-footer {
     background-color: @basic_yellow;
-
-    @media (min-width: @tablet-width) {
-      align-self: center;
-      width: 62px;
-      height: 62px;
-    }
   }
 }

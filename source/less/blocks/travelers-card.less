@@ -32,7 +32,7 @@
 
 .travelers-card__flags {
   position: absolute;
-  top: 258px;
+  top: 259px;
   left: 50%;
   transform: translateX(-50%);
   color: @basic_white;
@@ -63,10 +63,14 @@
     padding: 28px 20px 29px 20px;
     border-radius: 0 0 20px 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 29px 20px 29px 20px;
+  }
 }
 
 .travelers-card__user {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 26px;
@@ -81,7 +85,7 @@
 }
 
 .travelers-card__status {
-  transform: translateX(-12px);
+  transform: translateX(-13px) translateY(2px);
 
   @media (min-width: @tablet-width) {
     transform: translateX(-18px);
@@ -95,7 +99,7 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -104,9 +108,11 @@
 }
 
 .travelers-card__hashtags.hashtags {
-  margin-bottom: 19px;
+  width: 188px;
+  margin: 0 auto 19px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 27px;
+    width: auto;
+    margin: 0 auto 27px;
   }
 }

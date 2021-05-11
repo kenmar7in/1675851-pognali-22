@@ -1,20 +1,44 @@
+.trip-option-anchors {
+  &--2,
+  &--3 {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
 .trip-option-anchors__link {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: 7px;
+  padding: 5px 5px 5px 8px;
   font-family: @main-font;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
   text-transform: uppercase;
   text-align: center;
   background-color: @basic_yellow;
   border-radius: 20px;
 
+  @media (min-width: @tablet-width) {
+    width: 284px;
+    padding: 26px 33px 30px 33px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    text-align: left;
+  }
+
   &--next {
     margin-bottom: 13px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &--back {
@@ -22,5 +46,27 @@
     letter-spacing: 0.01em;
     background-color: transparent;
     border: none;
+  }
+
+  &--2 {
+    margin-bottom: 12px;
+    padding: 6px 5px 4px 3px;
+
+    @media (min-width: @tablet-width) {
+      width: 286px;
+      margin: 0;
+      padding: 26px 33px 30px 33px;
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+      text-align: left;
+    }
+  }
+
+  &--back-2,
+  &--back-3 {
+    @media (min-width: @tablet-width) {
+      width: auto;
+    }
   }
 }

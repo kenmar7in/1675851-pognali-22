@@ -19,7 +19,7 @@
     margin-bottom: 30px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 112px;
+      margin-bottom: 113px;
     }
 
     @media (min-width: @desktop-width) {
@@ -35,7 +35,7 @@
     @media (min-width: @desktop-width) {
       display: flex;
       justify-content: center;
-      padding-left: 110px;
+      padding-right: 35px;
     }
   }
 }
@@ -49,6 +49,11 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @noname_blue;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 
   &::before {
     content: "";
@@ -72,11 +77,6 @@
   }
 
   &--menu {
-    @media (min-width: @tablet-width) {
-      font-size: 28px;
-      line-height: 28px;
-    }
-
     &::before {
       width: 45px;
       height: 45px;
@@ -95,7 +95,6 @@
     line-height: 22px;
 
     @media (min-width: @tablet-width) {
-      font-size: 28px;
       line-height: 28px;
     }
 
@@ -140,6 +139,14 @@
     &::before {
       background-color: @noname_blue_7;
       background-image: url("../img/phone-2.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/phone-tablet-2.svg");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/phone-desktop-2.svg");
+      }
     }
   }
 
@@ -147,6 +154,20 @@
     &::before {
       background-color: @noname_blue_7;
       background-image: url("../img/email-2.svg");
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/email-tablet-2.svg");
+      }
+
+      @media (min-width: @desktop-width) {
+        background-image: url("../img/email-desktop-2.svg");
+      }
     }
+  }
+}
+
+.contacts__link--feedback.contacts__link--email-2 {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }

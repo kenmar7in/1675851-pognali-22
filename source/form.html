@@ -2,19 +2,65 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Направления &mdash; Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page__body">
-  <header class="page-header">
-    <nav class="page-header__main-nav  main-nav  main-nav--inner">
-      <div class="main-nav__wrapper">
-        <div class="main-nav__group">
-          <a class="main-nav__logo  main-nav__logo--inner  logo" href="index.html">Погнали?</a>
-          <button class="main-nav__btn">Меню</button>
+<body class="page__body  page__body--form">
+  <header class="page-header  page-header--form">
+    <nav class="page-header__main-nav  main-nav  main-nav--form">
+      <div class="main-nav__wrapper  main-nav__wrapper--form">
+
+        <!-- Main-Nav Group 1 Start -->
+        <div class="main-nav__group  main-nav__group--1  main-nav__group--form-1">
+          <a class="main-nav__logo  logo  logo--page-header" href="index.html"></a>
+          <ul class="main-nav__list  main-nav__list--page-header">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">О сервисе</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Направления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Попутчики</a></li>
+          </ul>
+          <button class="main-nav__toggle  menu-toggle  menu-toggle--closed">
+            <svg class="menu-toggle__item  menu-toggle__item--open" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="3" rx="1.5" fill="white"/><rect y="8" width="25" height="3" rx="1.5" fill="white"/></svg>
+            <svg class="menu-toggle__item  menu-toggle__item--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 2.97168 0.988155)" fill="#CCCCCC"/><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 0.600586 17.754)" fill="#CCCCCC"/></svg>
+          </button>
         </div>
-        <h1 class="page__title">Направления</h1>
+        <!-- Main-Nav Group 1 End -->
+
+        <h1 class="page__title  page__title--form">Направления</h1>
+
+        <!-- Main-Nav Group 2 Start -->
+        <div class="main-nav__group  main-nav__group--2  main-nav__group--form-2">
+          <ul class="main-nav__contacts  contacts  contacts--page-header">
+            <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--phone-1" href="tel:88005558628"></a></li>
+            <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--email-1" href="mailto:mail@htmlacademy.ru"></a></li>
+          </ul>
+          <a class="main-nav__auth" href="#">Авторизация</a>
+        </div>
+        <!-- Main-Nav Group 2 End -->
       </div>
+
+      <!-- Menu Start -->
+      <div class="main-nav__menu  menu  menu--closed">
+        <div class="main-nav__wrapper">
+          <a class="main-nav__logo  main-nav__logo--menu  logo  logo--menu"></a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">О сервисе</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Направления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Попутчики</a></li>
+          </ul>
+          <a class="main-nav__auth  main-nav__auth--menu" href="#">Авторизация</a>
+          <ul class="main-nav__contacts  contacts  contacts--menu">
+            <li class="contacts__item"><a class="contacts__link  contacts__link--menu  contacts__link--phone-2" href="tel:88005558628">8 800 555-86-28</a></li>
+            <li class="contacts__item"><a class="contacts__link  contacts__link--menu  contacts__link--email-2" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+          </ul>
+          <ul class="main-nav__social  social  social--page-header">
+            <li class="social__item"><a class="social__link  social__link--page-header  social__link--fb" href="#">Фейсбук</a></li>
+            <li class="social__item"><a class="social__link  social__link--page-header  social__link--vk" href="#">ВКонтакте</a></li>
+            <li class="social__item"><a class="social__link  social__link--page-header  social__link--in" href="#">Инстаграм</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Menu End -->
     </nav>
   </header>
 
@@ -27,10 +73,10 @@
               <span class="level__title  level__title--account">Level</span>
               <span class="level__value  level__value--account">80</span>
             </div>
-            <img class="account-view__photo" src="http://via.placeholder.com/100x100" alt="Фото профиля">
+            <div class="account-view__photo" src="http://via.placeholder.com/100x100">Фото профиля</div>
             <div class="account-view__group">
               <input class="account-view__input  visually-hidden" id="image" type="file" accept="image/*" name="image">
-              <label class="account-view__label" for="image">Сменить фото</label>
+              <label class="account-view__label" for="image"><span class="account-view__photo-expand">Сменить</span> фото</label>
             </div>
           </div>
           <div class="account__hashtags  hashtags">
@@ -40,21 +86,21 @@
           <div class="account__ways  account-ways">
             <h3 class="account-ways__title">Транспорт</h3>
             <ul class="account-ways__list">
-              <li class="account-ways__item  account-ways__item--plane">
-                <input class="account-ways__input" id="plane" type="checkbox" name="plane" checked>
-                <label class="account-ways__label" for="plane">Самолет</label>
+              <li class="account-ways__item  account-ways__item">
+                <input class="account-ways__input  visually-hidden" id="plane" type="checkbox" name="plane" checked>
+                <label class="account-ways__label  account-ways__label--plane" for="plane">Самолет</label>
               </li>
-              <li class="account-ways__item  account-ways__item--bus">
-                <input class="account-ways__input" id="bus" type="checkbox" name="bus">
-                <label class="account-ways__label" for="bus">Автобус</label>
+              <li class="account-ways__item  account-ways__item">
+                <input class="account-ways__input  visually-hidden" id="bus" type="checkbox" name="bus" checked>
+                <label class="account-ways__label  account-ways__label--bus" for="bus">Автобус</label>
               </li>
-              <li class="account-ways__item  account-ways__item--bicycle">
-                <input class="account-ways__input" id="bicycle" type="checkbox" name="bicycle" checked>
-                <label class="account-ways__label" for="bicycle">Велосипед</label>
+              <li class="account-ways__item  account-ways__item">
+                <input class="account-ways__input  visually-hidden" id="bicycle" type="checkbox" name="bicycle">
+                <label class="account-ways__label  account-ways__label--bicycle" for="bicycle">Велосипед</label>
               </li>
-              <li class="account-ways__item  account-ways__item--afoot">
-                <input class="account-ways__input" id="afoot" type="checkbox" name="afoot" checked>
-                <label class="account-ways__label" for="afoot">Без транспорта</label>
+              <li class="account-ways__item  account-ways__item">
+                <input class="account-ways__input  visually-hidden" id="afoot" type="checkbox" name="afoot" checked>
+                <label class="account-ways__label  account-ways__label--afoot" for="afoot">Без транспорта</label>
               </li>
             </ul>
           </div>
@@ -66,19 +112,19 @@
       <div class="user-plans__wrapper">
         <h2 class="user-plans__title">Мои планы:</h2>
         <ul class="user-plans__list">
-          <li class="user-plans__item  user-plans-card">
+          <li class="user-plans__item  user-plans-card  user-plans-card--1">
             <h3 class="user-plans-card__countries"><span class="user-plans__number">1.</span> Франция, Италия</h3>
             <div class="user-plans-card__group">
               <p class="user-plans-card__companions">3 попутчика</p>
-              <p class="user-plans-card__dates">26 мар — 29 мар</p>
+              <p class="user-plans-card__dates">26 мар &mdash; 29 мар</p>
               <a class="user-plans-card__settings" href="#">Изменить</a>
             </div>
           </li>
-          <li class="user-plans__item  user-plans-card">
+          <li class="user-plans__item  user-plans-card  user-plans-card--2">
             <h3 class="user-plans-card__countries"><span class="user-plans__number">2.</span> Таиланд, Индонезия</h3>
             <div class="user-plans-card__group">
               <p class="user-plans-card__companions">1 попутчик</p>
-              <p class="user-plans-card__dates">1 июл — 15 июл</p>
+              <p class="user-plans-card__dates">1 июл &mdash; 15 июл</p>
               <a class="user-plans-card__settings" href="#">Изменить</a>
             </div>
           </li>
@@ -92,35 +138,111 @@
         <form class="trip-options__form" action="https://echo.htmlacademy.ru" method="get">
           <ul class="trip-options__list">
             <li class="trip-options__item  trip-options__item--1  trip-option">
-              <h3 class="trip-option__title"><span class="trip-option__number">Шаг 1.</span> Даты пребывания</h3>
-              <p class="trip-option__descr">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-              <div class="trip-option__nav  trip-option-nav  visually-hidden">
-                <a class="trip-option-nav__link  trip-option-nav__link--dates" href="#">Даты</a>
+              <h3 class="trip-option__title  trip-option__title--1"><span class="trip-option__number">Шаг 1.</span> Даты пребывания</h3>
+              <p class="trip-option__descr  trip-option__descr--1">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="trip-option__nav  trip-option__nav--1  trip-option-nav">
+                <a class="trip-option-nav__link  trip-option-nav__link--dates  trip-option-nav__link--active" href="#">Даты</a>
                 <a class="trip-option-nav__link  trip-option-nav__link--routes" href="#">Маршрут</a>
                 <a class="trip-option-nav__link  trip-option-nav__link--ideas" href="#">Развлечения</a>
               </div>
               <div class="trip-option__dates  trip-option-dates">
-                <div class="trip-option-dates__group">
+                <div class="trip-option-dates__group  trip-option-dates__group--1">
                   <div class="trip-option-dates__subgroup">
                     <label class="trip-option-dates__title" for="companions">Ищу попутчиков:</label>
                     <p class="trip-option-dates__unit">Чел.</p>
                   </div>
-                  <input class="trip-option-dates__input-number" id="companions" type="number" name="companions" value="2">
+                  <div class="trip-option-dates__input-number-group">
+                    <input class="trip-option-dates__input-number" id="companions" type="number" name="companions" value="2">
+                    <button class="trip-option-dates__btn  trip-option-dates__btn--minus" type="button">Вычесть</button>
+                    <button class="trip-option-dates__btn  trip-option-dates__btn--plus" type="button">Прибавить</button>
+                  </div>
                 </div>
-                <div class="trip-option-dates__group">
+                <div class="trip-option-dates__group  trip-option-dates__group--2">
                   <div class="trip-option-dates__subgroup">
                     <label class="trip-option-dates__title" for="trip-duration">Длительность:</label>
                     <p class="trip-option-dates__unit">Дн.</p>
                   </div>
-                  <input class="trip-option-dates__input-number" id="trip-duration" type="number" name="trip-duration" value="2">
+                  <div class="trip-option-dates__input-number-group">
+                    <input class="trip-option-dates__input-number" id="trip-duration" type="number" name="trip-duration" value="2">
+                    <button class="trip-option-dates__btn  trip-option-dates__btn--minus" type="button">Вычесть</button>
+                    <button class="trip-option-dates__btn  trip-option-dates__btn--plus" type="button">Прибавить</button>
+                  </div>
                 </div>
                 <div class="trip-option-dates__group  trip-option-dates__group--checkbox">
-                  <input class="trip-option-dates__input-checkbox" id="kids" type="checkbox" name="kids" checked>
+                  <input class="trip-option-dates__input-checkbox  visually-hidden" id="kids" type="checkbox" name="kids" checked>
                   <label class="trip-option-dates__label-checkbox" for="kids">Можно с детьми</label>
                 </div>
-                <div class="trip-option-dates__group">
-                  <label class="trip-option-dates__title" for="date-range">Дата:</label>
-                  <input class="trip-option-dates__input-date" id="date-range" type="date" name="date-range" required>
+                <div class="trip-option-dates__group  trip-option-dates__group--calendar  calendar">
+                  <div class="calendar__group-months">
+                    <button class="calendar__months  calendar__months--back" type="button">Предыдущий месяц</button>
+                    <button class="calendar__months  calendar__months--change" type="button">Март 2019</button>
+                    <button class="calendar__months  calendar__months--next" type="button">Следующий месяц</button>
+                  </div>
+                  <table class="calendar__group-days">
+                    <tr class="calendar__days-row  calendar__days-row--title">
+                      <th class="calendar__days-title">П<span class="calendar__days-title-expand">т</span></th>
+                      <th class="calendar__days-title">В<span class="calendar__days-title-expand">т</span></th>
+                      <th class="calendar__days-title">С<span class="calendar__days-title-expand">р</span></th>
+                      <th class="calendar__days-title">Ч<span class="calendar__days-title-expand">т</span></th>
+                      <th class="calendar__days-title">П<span class="calendar__days-title-expand">т</span></th>
+                      <th class="calendar__days-title  calendar__days-title--weekend">С<span class="calendar__days-title-expand">б</span></th>
+                      <th class="calendar__days-title  calendar__days-title--weekend">В<span class="calendar__days-title-expand">с</span></th>
+                    </tr>
+                    <tr class="calendar__days-row">
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">23</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">24</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">25</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">26</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">27</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">28</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">1<span class="calendar__days-expand">&nbsp;мар</span></button></td>
+                    </tr>
+                    <tr class="calendar__days-row">
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">2</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">3</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">4</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">5</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">6</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">7</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">8</button></td>
+                    </tr>
+                    <tr class="calendar__days-row">
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">9</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">10</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">11</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">12</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">13</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">14</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">15</button></td>
+                    </tr>
+                    <tr class="calendar__days-row">
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">16</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">17</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">18</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">19</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">20</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">21</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">22</button></td>
+                    </tr>
+                    <tr class="calendar__days-row">
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">23</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">24</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn" type="button">25</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled  calendar__days-btn--picked" type="button">26<span class="calendar__days-start">Заезд</span></button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled  calendar__days-btn--picked" type="button">27</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled  calendar__days-btn--picked" type="button">28<span class="calendar__days-end">Выезд</span></button></td>
+                      <td class="calendar__days-cell  calendar__days-cell--current"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">29</button></td>
+                    </tr>
+                    <tr class="calendar__days-row">
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">30</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">31</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">1<span class="calendar__days-expand">&nbsp;апр</span></button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">2</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">3</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">4</button></td>
+                      <td class="calendar__days-cell"><button class="calendar__days-btn  calendar__days-btn--abled" type="button">5</button></td>
+                    </tr>
+                  </table>
                 </div>
               </div>
               <div class="trip-option__anchors  trip-option-anchors">
@@ -128,34 +250,51 @@
               </div>
             </li>
             <li class="trip-options__item  trip-options__item--2  trip-option">
-              <h3 class="trip-option__title"><span class="trip-option__number">Шаг 2.</span> Маршрут</h3>
-              <p class="trip-option__descr">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <h3 class="trip-option__title  trip-option__title--2"><span class="trip-option__number">Шаг 2.</span> Маршрут</h3>
+              <p class="trip-option__descr  trip-option__descr--2">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <div class="trip-option__nav  trip-option__nav--2  trip-option-nav">
+                <a class="trip-option-nav__link  trip-option-nav__link--dates" href="#">Даты</a>
+                <a class="trip-option-nav__link  trip-option-nav__link--routes  trip-option-nav__link--active" href="#">Маршрут</a>
+                <a class="trip-option-nav__link  trip-option-nav__link--ideas" href="#">Развлечения</a>
+              </div>
               <div class="trip-option__routes  trip-option-routes">
-                <div class="trip-option-routes__group">
-                  <select class="trip-option-routes__select" name="routes-1">
+                <div class="trip-option-routes__group  trip-option-routes__group--1">
+                  <select class="trip-option-routes__select  trip-option-routes__select--1" name="routes-1">
                     <option class="trip-option-routes__option" value="ba">Босния и Герцеговина</option>
                   </select>
+                  <div class="trip-option-routes__flag  trip-option-routes__flag--ba"></div>
+                  <div class="trip-option-routes__close"></div>
                 </div>
-                <div class="trip-option-routes__group">
+                <div class="trip-option-routes__group  trip-option-routes__group--2">
                   <select class="trip-option-routes__select" name="routes-2">
                     <option class="trip-option-routes__option" value="cz">Чехия</option>
                   </select>
+                  <div class="trip-option-routes__flag  trip-option-routes__flag--cz"></div>
+                  <div class="trip-option-routes__close"></div>
                 </div>
-                <div class="trip-option-routes__group">
+                <div class="trip-option-routes__group  trip-option-routes__group--3">
                   <select class="trip-option-routes__select" name="routes-3">
                     <option class="trip-option-routes__option" value="" selected disabled>Выберите страну</option>
                   </select>
+                  <div class="trip-option-routes__close"></div>
                 </div>
-                <button class="trip-option-routes__btn" type="button">Добавить страну</button>
+                <div class="trip-option-routes__group  trip-option-routes__group--4">
+                  <button class="trip-option-routes__btn" type="button">Добавить страну</button>
+                </div>
               </div>
-              <div class="trip-option__anchors  trip-option-anchors">
-                <a class="trip-option-anchors__link  trip-option-anchors__link--next" href="#">Следующий шаг</a>
-                <a class="trip-option-anchors__link  trip-option-anchors__link--back" href="#">На шаг назад</a>
+              <div class="trip-option__anchors  trip-option-anchors  trip-option-anchors--2">
+                <a class="trip-option-anchors__link  trip-option-anchors__link--next  trip-option-anchors__link--2" href="#">Следующий шаг</a>
+                <a class="trip-option-anchors__link  trip-option-anchors__link--back  trip-option-anchors__link--back-2" href="#">На шаг назад</a>
               </div>
             </li>
             <li class="trip-options__item  trip-options__item--3  trip-option">
-              <h3 class="trip-option__title"><span class="trip-option__number">Шаг 3.</span> Развлечения</h3>
-              <p class="trip-option__descr">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <h3 class="trip-option__title  trip-option__title--3"><span class="trip-option__number">Шаг 3.</span> Развлечения</h3>
+              <p class="trip-option__descr  trip-option__descr--3">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <div class="trip-option__nav  trip-option__nav--3  trip-option-nav">
+                <a class="trip-option-nav__link  trip-option-nav__link--dates" href="#">Даты</a>
+                <a class="trip-option-nav__link  trip-option-nav__link--routes" href="#">Маршрут</a>
+                <a class="trip-option-nav__link  trip-option-nav__link--ideas  trip-option-nav__link--active" href="#">Развлечения</a>
+              </div>
               <div class="trip-option__ideas  trip-option-ideas">
                 <div class="trip-option-ideas__group">
                   <label class="trip-option-ideas__title" for="ideas-1">Босния и Герцеговина</label>
@@ -166,9 +305,9 @@
                   <textarea class="trip-option-ideas__message  trip-option-ideas__message--2" id="ideas-2" name="ideas-2" placeholder="План действий" cols="20" rows="10" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </div>
               </div>
-              <button class="trip-option__btn" type="submit">Отправить</button>
-              <div class="trip-option__anchors  trip-option-anchors">
-                <a class="trip-option-anchors__link  trip-option-anchors__link--back" href="#">На шаг назад</a>
+              <div class="trip-option__anchors  trip-option-anchors  trip-option-anchors--3">
+                <button class="trip-option__btn" type="submit">Отправить</button>
+                <a class="trip-option-anchors__link  trip-option-anchors__link--back  trip-option-anchors__link--back-3" href="#">На шаг назад</a>
               </div>
             </li>
           </ul>
@@ -178,16 +317,20 @@
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo  logo" href="index.html">Погнали?</a>
-    <ul class="page-footer__social  social  social--page-footer">
-      <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
-      <li class="social__item"><a class="social__link" href="#">ВКонтакте</a></li>
-      <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
-    </ul>
-    <div class="page-footer__copyright  copyright">
-      <p class="copyright__descr">Разработано</p>
-      <a class="copyright__link" href="#">HTML Academy</a>
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo  logo  logo--page-footer" href="index.html"></a>
+      <ul class="page-footer__social  social  social--page-footer">
+        <li class="social__item"><a class="social__link  social__link--page-footer  social__link--fb" href="#">Фейсбук</a></li>
+        <li class="social__item"><a class="social__link  social__link--page-footer  social__link--vk" href="#">ВКонтакте</a></li>
+        <li class="social__item"><a class="social__link  social__link--page-footer  social__link--in" href="#">Инстаграм</a></li>
+      </ul>
+      <div class="page-footer__copyright  copyright">
+        <p class="copyright__descr">Разработано</p>
+        <a class="copyright__link" href="#">HTML Academy</a>
+      </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

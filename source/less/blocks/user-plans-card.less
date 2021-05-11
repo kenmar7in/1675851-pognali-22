@@ -1,15 +1,91 @@
+.user-plans-card {
+  padding: 22px 25px 23px;
+  background-color: @basic_white;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 38px 40px 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 42px 36px 43px;
+  }
+
+  &--2 {
+    @media (min-width: @desktop-width) {
+      padding: 36px 42px 38px 43px;
+    }
+  }
+}
+
 .user-plans-card__countries {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   font-family: @main-font;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin-bottom: 34px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .user-plans__number {
   font-weight: 500;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 3px;
+    right: -7px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    margin-right: 30px;
+  }
+}
+
+.user-plans-card__group {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    padding-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% + 80px);
+      height: 1px;
+      background-color: @noname_grey_4;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .user-plans-card__companions,
@@ -20,16 +96,37 @@
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.06em;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.user-plans-card__dates {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    letter-spacing: 0.06em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 137px;
+  }
 }
 
 .user-plans-card__companions {
   margin-bottom: 5px;
-}
 
-.user-plans-card__dates {
-  margin-bottom: 24px;
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
 }
 
 .user-plans-card__settings {
@@ -40,4 +137,15 @@
   letter-spacing: 0.03em;
   color: @basic_black_30;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.08em;
+  }
 }
