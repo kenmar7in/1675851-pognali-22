@@ -2,24 +2,59 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -7px;
+    right: 0;
+  }
 }
 
 .account-view__photo {
+  width: 100px;
+  height: 100px;
   margin-bottom: 18px;
+  font-size: 0;
   border-radius: 50%;
+  background-color: @temp;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    margin-bottom: 0;
+    border-radius: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -256px;
+    right: 95px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 .account-view__group {
   box-sizing: border-box;
   flex-basis: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 51px;
+  }
 }
 
 .account-view__label {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  margin-bottom: 25px;
-  padding: 12px;
+  margin-bottom: 33px;
+  padding: 10px 12px 12px;
   font-family: @main-font;
   font-weight: 500;
   font-size: 20px;
@@ -30,4 +65,29 @@
   background-color: @special_blue_light;
   border-radius: 20px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+    padding: 22px 12px 20px;
+    letter-spacing: 0.09em;
+    border-radius: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -66px;
+    right: 95px;
+    z-index: 1;
+    width: 190px;
+    padding: 16px 12px 14px;
+    letter-spacing: 0;
+
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.account-view__photo-expand {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

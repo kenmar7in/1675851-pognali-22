@@ -2,19 +2,65 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог &mdash; Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <header class="page-header">
-    <nav class="page-header__main-nav  main-nav  main-nav--inner">
-      <div class="main-nav__wrapper">
-        <div class="main-nav__group">
-          <a class="main-nav__logo  main-nav__logo--inner  logo" href="index.html">Погнали?</a>
-          <button class="main-nav__btn">Меню</button>
+  <header class="page-header  page-header--catalog">
+    <nav class="page-header__main-nav  main-nav  main-nav--catalog">
+      <div class="main-nav__wrapper  main-nav__wrapper--catalog">
+
+        <!-- Main-Nav Group 1 Start -->
+        <div class="main-nav__group  main-nav__group--1  main-nav__group--catalog-1">
+          <a class="main-nav__logo  logo  logo--page-header" href="index.html"></a>
+          <ul class="main-nav__list  main-nav__list--page-header">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">О сервисе</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Направления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Попутчики</a></li>
+          </ul>
+          <button class="main-nav__toggle  menu-toggle  menu-toggle--closed">
+            <svg class="menu-toggle__item  menu-toggle__item--open" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="3" rx="1.5" fill="white"/><rect y="8" width="25" height="3" rx="1.5" fill="white"/></svg>
+            <svg class="menu-toggle__item  menu-toggle__item--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 2.97168 0.988155)" fill="#CCCCCC"/><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 0.600586 17.754)" fill="#CCCCCC"/></svg>
+          </button>
         </div>
-        <h1 class="page__title">Попутчики</h1>
+        <!-- Main-Nav Group 1 End -->
+
+        <h1 class="page__title  page__title--catalog">Попутчики</h1>
+
+        <!-- Main-Nav Group 2 Start -->
+        <div class="main-nav__group  main-nav__group--2  main-nav__group--catalog-2">
+          <ul class="main-nav__contacts  contacts  contacts--page-header">
+            <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--phone-1" href="tel:88005558628"></a></li>
+            <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--email-1" href="mailto:mail@htmlacademy.ru"></a></li>
+          </ul>
+          <a class="main-nav__auth" href="#">Авторизация</a>
+        </div>
+        <!-- Main-Nav Group 2 End -->
       </div>
+
+      <!-- Menu Start -->
+      <div class="main-nav__menu  menu  menu--closed">
+        <div class="main-nav__wrapper">
+          <a class="main-nav__logo  main-nav__logo--menu  logo  logo--menu"></a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">О сервисе</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Направления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Попутчики</a></li>
+          </ul>
+          <a class="main-nav__auth  main-nav__auth--menu" href="#">Авторизация</a>
+          <ul class="main-nav__contacts  contacts  contacts--menu">
+            <li class="contacts__item"><a class="contacts__link  contacts__link--menu  contacts__link--phone-2" href="tel:88005558628">8 800 555-86-28</a></li>
+            <li class="contacts__item"><a class="contacts__link  contacts__link--menu  contacts__link--email-2" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>
+          </ul>
+          <ul class="main-nav__social  social  social--page-header">
+            <li class="social__item"><a class="social__link  social__link--page-header  social__link--fb" href="#">Фейсбук</a></li>
+            <li class="social__item"><a class="social__link  social__link--page-header  social__link--vk" href="#">ВКонтакте</a></li>
+            <li class="social__item"><a class="social__link  social__link--page-header  social__link--in" href="#">Инстаграм</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Menu End -->
     </nav>
   </header>
 
@@ -248,16 +294,20 @@
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo  logo" href="index.html">Погнали?</a>
-    <ul class="page-footer__social  social  social--page-footer">
-      <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
-      <li class="social__item"><a class="social__link" href="#">ВКонтакте</a></li>
-      <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
-    </ul>
-    <div class="page-footer__copyright  copyright">
-      <p class="copyright__descr">Разработано</p>
-      <a class="copyright__link" href="#">HTML Academy</a>
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo  logo  logo--page-footer"></a>
+      <ul class="page-footer__social  social  social--page-footer">
+        <li class="social__item"><a class="social__link  social__link--page-footer  social__link--fb" href="#">Фейсбук</a></li>
+        <li class="social__item"><a class="social__link  social__link--page-footer  social__link--vk" href="#">ВКонтакте</a></li>
+        <li class="social__item"><a class="social__link  social__link--page-footer  social__link--in" href="#">Инстаграм</a></li>
+      </ul>
+      <div class="page-footer__copyright  copyright">
+        <p class="copyright__descr">Разработано</p>
+        <a class="copyright__link" href="#">HTML Academy</a>
+      </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

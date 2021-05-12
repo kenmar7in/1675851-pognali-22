@@ -1,7 +1,18 @@
 .sorting-by-countries {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 15px;
   background-color: @noname_blue_6;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 100%;
+    height: 24px;
+    background-color: @noname_blue_6;
+  }
 }
 
 .sorting-by-countries__wrapper {

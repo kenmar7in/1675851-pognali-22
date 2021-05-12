@@ -4,6 +4,7 @@
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
+  color: @special_grey;
 }
 
 .page__body {
@@ -13,15 +14,99 @@
   min-height: 100%;
   margin: 0;
   padding: 0;
-  color: @special_grey;
+
+  &--form {
+    @media (min-width: @desktop-width) {
+      background-color: @basic_blue_light;
+    }
+  }
 }
 
 .page__title {
+  display: inline-block; /* decorative line under title at inside pages */
   margin: 0;
   font-family: @main-font;
   font-weight: 700;
   font-style: normal;
-  font-size: 36px;
-  line-height: 36px;
   color: @basic_white;
+
+  &--index {
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: relative;
+      z-index: 1; /* > .review__content */
+      width: 420px;
+      padding-left: 67px;
+      text-align: left;
+    }
+  }
+
+  &--form {
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      width: 100%;
+      height: 5px;
+      background-color: @special_orange;
+      border-radius: 4px;
+
+      @media (min-width: @tablet-width) {
+        bottom: -74px;
+        height: 8px;
+      }
+
+      @media (min-width: @desktop-width) {
+        bottom: -75px;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      transform: translateX(-5px);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: translateX(64px);
+    }
+  }
+
+  &--catalog {
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      width: 100%;
+      height: 5px;
+      background-color: @special_orange;
+      border-radius: 4px;
+
+      @media (min-width: @tablet-width) {
+        bottom: -96px;
+        height: 8px;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 20px;
+    }
+  }
 }

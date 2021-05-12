@@ -7,34 +7,46 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <header class="page-header">
-    <nav class="page-header__main-nav  main-nav">
-      <div class="main-nav__wrapper">
-        <div class="main-nav__content">
-          <div class="main-nav__group  main-nav__group--1">
-            <a class="main-nav__logo  logo  logo--page-header"></a>
-            <button class="main-nav__toggle  menu-toggle  menu-toggle--closed">
-              <svg class="menu-toggle__item  menu-toggle__item--open" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="3" rx="1.5" fill="white"/><rect y="8" width="25" height="3" rx="1.5" fill="white"/></svg>
-              <svg class="menu-toggle__item  menu-toggle__item--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 2.97168 0.988155)" fill="#CCCCCC"/><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 0.600586 17.754)" fill="#CCCCCC"/></svg>
-            </button>
-          </div>
-          <h2 class="main-nav__title">В путешествие с&nbsp;крутыми попутчиками!</h2>
-          <div class="main-nav__group  main-nav__group--2">
-            <ul class="main-nav__contacts  contacts  contacts--page-header">
-              <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--phone-1" href="tel:88005558628"></a></li>
-              <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--email-1" href="mailto:mail@htmlacademy.ru"></a></li>
-            </ul>
-            <a class="main-nav__auth" href="#">Авторизация</a>
-          </div>
+  <header class="page-header  page-header--index">
+    <nav class="page-header__main-nav  main-nav  main-nav--index">
+      <div class="main-nav__wrapper  main-nav__wrapper--index">
+
+        <!-- Main-Nav Group 1 Start -->
+        <div class="main-nav__group  main-nav__group--1  main-nav__group--index-1">
+          <a class="main-nav__logo  logo  logo--page-header"></a>
+          <ul class="main-nav__list  main-nav__list--page-header">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">О сервисе</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Направления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Попутчики</a></li>
+          </ul>
+          <button class="main-nav__toggle  menu-toggle  menu-toggle--closed">
+            <svg class="menu-toggle__item  menu-toggle__item--open" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="3" rx="1.5" fill="white"/><rect y="8" width="25" height="3" rx="1.5" fill="white"/></svg>
+            <svg class="menu-toggle__item  menu-toggle__item--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 0.718003 -0.69604 0.718003 2.97168 0.988155)" fill="#CCCCCC"/><rect width="23.8906" height="2.0318" rx="1.0159" transform="matrix(0.69604 -0.718003 0.69604 0.718003 0.600586 17.754)" fill="#CCCCCC"/></svg>
+          </button>
         </div>
+        <!-- Main-Nav Group 1 End -->
+
+        <h2 class="page__title  page__title--index">В путешествие с&nbsp;крутыми попутчиками!</h2>
+
+        <!-- Main-Nav Group 2 Start -->
+        <div class="main-nav__group  main-nav__group--2  main-nav__group--index-2">
+          <ul class="main-nav__contacts  contacts  contacts--page-header">
+            <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--phone-1" href="tel:88005558628"></a></li>
+            <li class="contacts__item"><a class="contacts__link  contacts__link--page-header  contacts__link--email-1" href="mailto:mail@htmlacademy.ru"></a></li>
+          </ul>
+          <a class="main-nav__auth" href="#">Авторизация</a>
+        </div>
+        <!-- Main-Nav Group 2 End -->
       </div>
+
+      <!-- Menu Start -->
       <div class="main-nav__menu  menu  menu--closed">
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper  main-nav__wrapper--menu">
           <a class="main-nav__logo  main-nav__logo--menu  logo  logo--menu"></a>
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="#">О сервисе</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">О сервисе</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Направления</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">Попутчики</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Попутчики</a></li>
           </ul>
           <a class="main-nav__auth  main-nav__auth--menu" href="#">Авторизация</a>
           <ul class="main-nav__contacts  contacts  contacts--menu">
@@ -48,8 +60,10 @@
           </ul>
         </div>
       </div>
+      <!-- Menu End -->
     </nav>
 
+    <!-- Review Start -->
     <blockquote class="page-header__review  review">
       <div class="review__wrapper">
         <div class="review__content">
@@ -58,7 +72,9 @@
         </div>
       </div>
     </blockquote>
+    <!-- Review End -->
 
+    <!-- Short Start -->
     <div class="page-header__short  short">
       <div class="short__wrapper">
         <ul class="short__steps  steps">
@@ -81,6 +97,7 @@
         </ul>
       </div>
     </div>
+    <!-- Short End -->
   </header>
 
   <main>
@@ -104,7 +121,7 @@
           <p class="countries__descr">Мы не продаем туры и&nbsp;ничего&nbsp;не рекламируем. Люди&nbsp;сами пишут о странах, куда хотели бы отправиться и&nbsp;чем можно там заняться.</p>
         </div>
         <ul class="countries__list">
-          <li class="countries__item  countries-card">
+          <li class="countries__item  countries-card  countries-card--1">
             <div class="countries-card__view">
               <div class="countries-card__photo">Фотография острова Пхи-Пхи на побережье Тайланда</div>
               <div class="countries-card__flags  flags">
@@ -117,7 +134,7 @@
               <span class="countries-card__users">18321</span>
             </div>
           </li>
-          <li class="countries__item  countries-card">
+          <li class="countries__item  countries-card  countries-card--2">
             <div class="countries-card__view">
               <div class="countries-card__photo">Фотография Люксембургского сада в Париже</div>
               <div class="countries-card__flags  flags">
@@ -130,7 +147,7 @@
               <span class="countries-card__users">12518</span>
             </div>
           </li>
-          <li class="countries__item  countries-card">
+          <li class="countries__item  countries-card  countries-card--3">
             <div class="countries-card__view">
               <div class="countries-card__photo">Фотография Карлова моста в Праге</div>
               <div class="countries-card__flags  flags">
@@ -139,7 +156,7 @@
             </div>
             <div class="countries-card__descr">
               <h3 class="countries-card__name">Чехия</h3>
-              <p class="countries-card__slogan">Закоулки старой&nbsp;Европы</p>
+              <p class="countries-card__slogan">Закоулки старой Европы</p>
               <span class="countries-card__users">5326</span>
             </div>
           </li>
@@ -225,15 +242,15 @@
         <h2 class="profile__title">Добавьте свой профиль</h2>
         <div class="profile__pricing  profile-pricing">
           <table class="profile-pricing__list">
-            <tr class="profile-pricing__item">
+            <tr class="profile-pricing__item  profile-pricing__item--1">
               <td class="profile-pricing__name  profile-pricing__name--1">Базовое размещение</td>
               <td class="profile-pricing__amount">Бесплатно</td>
             </tr>
-            <tr class="profile-pricing__item">
+            <tr class="profile-pricing__item  profile-pricing__item--2">
               <td class="profile-pricing__name  profile-pricing__name--2">Вывод на первых позициях</td>
               <td class="profile-pricing__amount">99 руб./мес</td>
             </tr>
-            <tr class="profile-pricing__item">
+            <tr class="profile-pricing__item  profile-pricing__item--3">
               <td class="profile-pricing__name  profile-pricing__name--3">Кастомный цвет карточки</td>
               <td class="profile-pricing__amount">59 руб./мес</td>
             </tr>
@@ -252,7 +269,7 @@
           <input class="feedback-form__input" id="feedback-input-id" type="email" name="email" placeholder="E-mail">
           <button class="feedback-form__btn  btn" type="submit">Регистрация</button>
         </form>
-        <p class="feedback__descr  feedback__descr--margin">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
+        <p class="feedback__descr  feedback__descr--2">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
         <ul class="feedback__contacts  contacts  contacts--feedback">
           <li class="contacts__item"><a class="contacts__link  contacts__link--feedback  contacts__link--phone-2" href="tel:88005558628">8 800 555-86-28</a></li>
           <li class="contacts__item"><a class="contacts__link  contacts__link--feedback  contacts__link--email-2" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></li>

@@ -1,15 +1,96 @@
+.trip-option-dates {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 29px;
+    border-top: 1px solid @noname_grey_2;
+  }
+}
+
 .trip-option-dates__group {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+
+  &--1 {
+    margin-bottom: 19px;
+
+    @media (min-width: @tablet-width) {
+      order: -2;
+      margin-bottom: 26px;
+      padding-top: 25px;
+      border-top: 1px solid @noname_grey_2;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &--2 {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 59px;
+      padding-top: 25px;
+      border-top: 1px solid @noname_grey_2;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &--1,
+  &--2 {
+    @media (min-width: @desktop-width) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 475px;
+      padding: 0;
+      border: none;
+    }
+  }
 
   &--checkbox {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      order: -1;
+      margin-bottom: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 46px;
+      left: 757px;
+      margin-bottom: 0;
+    }
+  }
+
+  &--calendar {
+    margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 47px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 57px;
+    }
   }
 }
 
 .trip-option-dates__subgroup {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .trip-option-dates__title,
@@ -20,22 +101,59 @@
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.09em;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.trip-option-dates__title {
+  @media (min-width: @desktop-width) {
+    width: 221px;
+    letter-spacing: 0;
+  }
 }
 
 .trip-option-dates__unit {
-  color: @basic_blue_light_30;
+  color: @basic_blue_dark_30;
+
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 40px;
+    letter-spacing: 0;
+    color: @basic_blue_dark;
+    text-align: left;
+  }
+}
+
+.trip-option-dates__input-number-group {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    width: 180px;
+  }
 }
 
 .trip-option-dates__input-number {
   box-sizing: border-box;
   width: 100%;
-  padding: 16px 43px 13px;
+  padding: 12px 43px 12px;
   font-family: @main-font;
   font-weight: 500;
   font-size: 14.86px;
   line-height: 14px;
+  color: @basic_blue_dark;
   text-align: center;
   border: 1px solid @noname_grey_4;
   border-radius: 4px;
@@ -50,13 +168,110 @@
   &:focus {
     outline: none;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 22px 43px 22px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.trip-option-dates__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  background: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  cursor: pointer;
+
+  &--minus {
+    left: 0;
+    background-image: url("../img/minus.svg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/minus-tablet.svg");
+    }
+  }
+
+  &--plus {
+    right: 0;
+    background-image: url("../img/plus.svg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/plus-tablet.svg");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 60px;
+  }
 }
 
 .trip-option-dates__label-checkbox {
+  display: flex;
+  align-items: center;
   font-family: @main-font;
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.085em;
+  }
+}
+
+.trip-option-dates__input-checkbox + .trip-option-dates__label-checkbox {
+  &::before {
+    content: "";
+    box-sizing: border-box;
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin-right: 13px;
+    border: 1px solid @noname_grey_4;
+    border-radius: 4px;
+
+    @media (min-width: @tablet-width) {
+      width: 36px;
+      height: 36px;
+      margin-right: 21px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 22px;
+    }
+  }
+}
+
+.trip-option-dates__input-checkbox:checked + .trip-option-dates__label-checkbox {
+  &::before {
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/check-tablet.svg");
+    }
+  }
 }
