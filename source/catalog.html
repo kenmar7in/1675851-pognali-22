@@ -6,7 +6,7 @@
   <title>Каталог &mdash; Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page__body">
+<body class="page__body  page__body--catalog">
   <header class="page-header  page-header--catalog">
     <nav class="page-header__main-nav  main-nav  main-nav--catalog">
       <div class="main-nav__wrapper  main-nav__wrapper--catalog">
@@ -27,6 +27,7 @@
         <!-- Main-Nav Group 1 End -->
 
         <h1 class="page__title  page__title--catalog">Попутчики</h1>
+        <a class="page__link  page__link--catalog" href="index.html">На главную</a>
 
         <!-- Main-Nav Group 2 Start -->
         <div class="main-nav__group  main-nav__group--2  main-nav__group--catalog-2">
@@ -69,228 +70,587 @@
       <div class="sorting-by-countries__wrapper">
         <div class="sorting-by-countries__group">
           <h2 class="sorting-by-countries__title">Фильтрация по странам:</h2>
-          <button class="sorting-by-countries__btn">Показать</button>
+          <ul class="sorting-by-countries__list">
+            <li class="sorting-by-countries__item"><button class="sorting-by-countries__link  sorting-by-countries__link--active">Европа</button></li>
+            <li class="sorting-by-countries__item"><button class="sorting-by-countries__link">Азия</button></li>
+            <li class="sorting-by-countries__item"><button class="sorting-by-countries__link">Америка</button></li>
+            <li class="sorting-by-countries__item"><button class="sorting-by-countries__link">Острова</button></li>
+          </ul>
+          <button class="sorting-by-countries__btn">Показать все</button>
         </div>
-      </div>
-    </section>
-
-    <section class="sorting-by-person">
-      <div class="sorting-by-person__wrapper">
-        <div class="sorting-by-person__content">
-          <h2 class="sorting-by-person__title">Подберите идеального попутчика</h2>
-          <form class="sorting-by-person__list" action="https://echo.htmlacademy.ru" method="post">
-            <div class="sorting-by-person__item  person-feature">
-              <button class="person-feature__btn" type="button">Хобби</button>
-            </div>
-            <div class="sorting-by-person__item  person-feature">
-              <button class="person-feature__btn" type="button">Музыка</button>
-              <div class="person-feature__list">
-                <div class="person-feature__item">
-                  <input class="person-feature__input" id="hard-rock" type="checkbox" name="hard-rock" checked>
-                  <label class="person-feature__label" for="hard-rock">Тяжелый рок</label>
-                </div>
-                <div class="person-feature__item">
-                  <input class="person-feature__input" id="russian-rap" type="checkbox" name="russian-rap" checked>
-                  <label class="person-feature__label" for="russian-rap">Русский рэп</label>
-                </div>
-                <div class="person-feature__item">
-                  <input class="person-feature__input" id="eurodance" type="checkbox" name="eurodance">
-                  <label class="person-feature__label" for="eurodance">Евроденс</label>
-                </div>
+        <div class="sorting-by-countries__table  countries-table">
+          <div class="countries-table__row  countries-table__row--1">
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">А</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Австралия</button>
+                <button class="countries-table__item">Австрия</button>
+                <button class="countries-table__item">Азербайджан</button>
+                <button class="countries-table__item">Албания</button>
+                <button class="countries-table__item">Алжир</button>
+                <button class="countries-table__item">Ангола</button>
+                <button class="countries-table__item">Андорра</button>
+                <button class="countries-table__item">Антигуа и Барбуда</button>
+                <button class="countries-table__item">Аргентина</button>
+                <button class="countries-table__item">Армения</button>
+                <button class="countries-table__item">Афганистан</button>
               </div>
             </div>
-            <div class="sorting-by-person__item  person-feature">
-              <button class="person-feature__btn" type="button">Еда</button>
-            </div>
-            <div class="sorting-by-person__item  person-feature">
-              <button class="person-feature__btn" type="button">Транспорт</button>
-              <div class="person-feature__list">
-                <div class="person-feature__item">
-                  <input class="person-feature__input" id="plane" type="checkbox" name="plane" checked>
-                  <label class="person-feature__label" for="plane">Самолет</label>
-                </div>
-                <div class="person-feature__item">
-                  <input class="person-feature__input" id="bus" type="checkbox" name="bus">
-                  <label class="person-feature__label" for="bus">Автобус</label>
-                </div>
-                <div class="person-ways__item">
-                  <input class="person-feature__input" id="bicycle" type="checkbox" name="bicycle" checked>
-                  <label class="person-feature__label" for="bicycle">Велосипед</label>
-                </div>
-                <div class="person-ways__item">
-                  <input class="person-feature__input" id="afoot" type="checkbox" name="afoot" checked>
-                  <label class="person-feature__label" for="afoot">Без транспорта</label>
-                </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Б</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Багамские Острова</button>
+                <button class="countries-table__item">Бангладеш</button>
+                <button class="countries-table__item">Барбадос</button>
+                <button class="countries-table__item">Бахрейн</button>
+                <button class="countries-table__item">Белоруссия</button>
+                <button class="countries-table__item">Белиз</button>
+                <button class="countries-table__item">Бельгия</button>
+                <button class="countries-table__item">Бенин</button>
+                <button class="countries-table__item">Болгария</button>
+                <button class="countries-table__item">Боливия</button>
+                <button class="countries-table__item">Босния и Герцеговина</button>
+                <button class="countries-table__item">Ботсвана</button>
+                <button class="countries-table__item">Бразилия</button>
+                <button class="countries-table__item">Бруней</button>
+                <button class="countries-table__item">Буркина-Фасо</button>
+                <button class="countries-table__item">Бурунди</button>
+                <button class="countries-table__item">Бутан</button>
               </div>
             </div>
-            <div class="sorting-by-person__item  person-feature">
-              <button class="person-feature__btn" type="button">Левел</button>
-              <div class="person-feature__group">
-                <div class="range">
-                  <div class="range-fields">
-                    <input class="range-fields__input  range-fields__input--min" type="text" name="min-value" value="30">
-                    <input class="range-fields__input  range-fields__input--max" type="text" name="max-value" value="100">
-                  </div>
-                  <div class="range-controls">
-                    <div class="range-controls__scale">
-                      <div class="range-controls__bar" style="width: 70%"></div>
-                    </div>
-                    <div class="range-controls__toggle  range-controls__toggle--min" style="left: 30%">Минимальная цена</div>
-                    <div class="range-controls__toggle  range-controls__toggle--max" style="right: 0">Максимальная цена</div>
-                  </div>
-                </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">В</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Вануату</button>
+                <button class="countries-table__item">Великобритания</button>
+                <button class="countries-table__item">Венгрия</button>
+                <button class="countries-table__item">Венесуэла</button>
+                <button class="countries-table__item">Восточный Тимор</button>
+                <button class="countries-table__item">Вьетнам</button>
               </div>
             </div>
-            <button class="sorting-by-person__btn" type="submit">Показать</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="catalog">
-      <h2 class="visually-hidden">Каталог</h2>
-      <div class="catalog__wrapper">
-        <div class="catalog__list">
-          <article class="catalog__item  traveler">
-            <a class="traveler__link" href="#">
-              <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Таня Фирсова">
-              <h3 class="traveler__name">Таня Фирсова</h3>
-            </a>
-            <span class="traveler__status  status  status--offline">Офлайн</span>
-            <span class="traveler__popularity">1,5 М</span>
-            <p class="traveler__hashtags  hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <div class="traveler__flags  traveler-countries">
-              <h4 class="traveler-countries__title">Хочет посетить:</h4>
-              <div class="traveler-countries__list  flags">
-                <span class="flags__link  flags__link--lk">Шри-Ланка</span>
-                <span class="flags__link  flags__link--th">Таиланд</span>
-                <span class="flags__link  flags__link--sc">Сейшелы</span>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Г</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Габон</button>
+                <button class="countries-table__item">Гаити</button>
+                <button class="countries-table__item">Гайана</button>
+                <button class="countries-table__item">Гамбия</button>
+                <button class="countries-table__item">Гана</button>
+                <button class="countries-table__item">Гватемала</button>
+                <button class="countries-table__item">Гвинея</button>
+                <button class="countries-table__item">Гвинея-Бисау</button>
+                <button class="countries-table__item">Германия</button>
+                <button class="countries-table__item">Гондурас</button>
+                <button class="countries-table__item">Гренада</button>
+                <button class="countries-table__item">Греция</button>
+                <button class="countries-table__item">Грузия</button>
               </div>
             </div>
-            <div class="catalog__group">
-              <div class="traveler__ways  traveler-ways">
-                <h4 class="traveler-ways__title">Транспорт:</h4>
-                <div class="traveler-ways__list  ways">
-                  <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
-                  <span class="ways__link  ways__link--bus">Автобус</span>
-                  <span class="ways__link  ways__link--bicycle">Велосипед</span>
-                  <span class="ways__link  ways__link--afoot">Без транспорта</span>
-                </div>
-              </div>
-              <div class="traveler__level  level  level--traveler">
-                <span class="level__title  level__title--traveler">Левел:</span>
-                <span class="level__value  level__value--traveler">99</span>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Д</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Дания</button>
+                <button class="countries-table__item">Джибути</button>
+                <button class="countries-table__item">Доминика</button>
+                <button class="countries-table__item">Доминикана</button>
               </div>
             </div>
-            <button class="traveler__btn">Позвать!</button>
-          </article>
-          <article class="catalog__item  traveler">
-            <a class="traveler__link" href="#">
-              <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Петя Демин">
-              <h3 class="traveler__name">Петя Демин</h3>
-            </a>
-            <span class="traveler__status  status  status--offline">Офлайн</span>
-            <span class="traveler__popularity">1500</span>
-            <p class="traveler__hashtags  hashtags">#бургер #бар #футбол #концерт #крафт</p>
-            <div class="traveler__flags  traveler-countries">
-              <h4 class="traveler-countries__title">Хочет посетить:</h4>
-              <div class="traveler-countries__list  flags">
-                <span class="flags__link  flags__link--be">Бельгия</span>
-                <span class="flags__link  flags__link--cz">Чехия</span>
+          </div>
+          <div class="countries-table__row  countries-table__row--2">
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Е</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Египет</button>
               </div>
             </div>
-            <div class="catalog__group">
-              <div class="traveler__ways  traveler-ways">
-                <h4 class="traveler-ways__title">Транспорт:</h4>
-                <div class="traveler-ways__list  ways">
-                  <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
-                  <span class="ways__link  ways__link--bus  ways__link--active">Автобус</span>
-                  <span class="ways__link  ways__link--bicycle">Велосипед</span>
-                  <span class="ways__link  ways__link--afoot  ways__link--active">Без транспорта</span>
-                </div>
-              </div>
-              <div class="traveler__level  level  level--traveler">
-                <span class="level__title  level__title--traveler">Левел:</span>
-                <span class="level__value  level__value--traveler">80</span>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">З</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Замбия</button>
+                <button class="countries-table__item">Зимбабве</button>
               </div>
             </div>
-            <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
-          </article>
-          <article class="catalog__item  traveler">
-            <a class="traveler__link" href="#">
-              <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Марк Смолов">
-              <h3 class="traveler__name">Марк Смолов</h3>
-            </a>
-            <span class="traveler__status  status  status--offline">Офлайн</span>
-            <span class="traveler__popularity">170</span>
-            <p class="traveler__hashtags  hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <div class="traveler__flags  traveler-countries">
-              <h4 class="traveler-countries__title">Хочет посетить:</h4>
-              <div class="traveler-countries__list  flags">
-                <span class="flags__link  flags__link--us">США</span>
-                <span class="flags__link  flags__link--au">Австралия</span>
-                <span class="flags__link  flags__link--dm">Доминика</span>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">И</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Израиль</button>
+                <button class="countries-table__item">Индия</button>
+                <button class="countries-table__item">Индонезия</button>
+                <button class="countries-table__item">Иордания</button>
+                <button class="countries-table__item">Ирак</button>
+                <button class="countries-table__item">Иран</button>
+                <button class="countries-table__item">Ирландия</button>
+                <button class="countries-table__item">Исландия</button>
+                <button class="countries-table__item">Испания</button>
+                <button class="countries-table__item">Италия</button>
               </div>
             </div>
-            <div class="catalog__group">
-              <div class="traveler__ways  traveler-ways">
-                <h4 class="traveler-ways__title">Транспорт:</h4>
-                <div class="traveler-ways__list  ways">
-                  <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
-                  <span class="ways__link  ways__link--bus">Автобус</span>
-                  <span class="ways__link  ways__link--bicycle  ways__link--active">Велосипед</span>
-                  <span class="ways__link  ways__link--afoot">Без транспорта</span>
-                </div>
-              </div>
-              <div class="traveler__level  level  level--traveler">
-                <span class="level__title  level__title--traveler">Левел:</span>
-                <span class="level__value  level__value--traveler">25</span>
-              </div>
-            </div>
-            <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
-          </article>
-          <article class="catalog__item  traveler">
-            <a class="traveler__link" href="#">
-              <img class="traveler__photo" src="http://via.placeholder.com/70x70" alt="Лариса Роговая">
-              <h3 class="traveler__name">Лариса Роговая</h3>
-            </a>
-            <span class="traveler__status  status  status--online">Онлайн</span>
-            <span class="traveler__popularity">23</span>
-            <p class="traveler__hashtags  hashtags">#образование #карьера #учеба #линкедин</p>
-            <div class="traveler__flags  traveler-countries">
-              <h4 class="traveler-countries__title">Хочет посетить:</h4>
-              <div class="traveler-countries__list  flags">
-                <span class="flags__link  flags__link--uk">Великобритания</span>
-                <span class="flags__link  flags__link--de">Германия</span>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">К</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Кабо-Верде</button>
+                <button class="countries-table__item">Казахстан</button>
+                <button class="countries-table__item">Камбоджа</button>
+                <button class="countries-table__item">Камерун</button>
+                <button class="countries-table__item">Канада</button>
+                <button class="countries-table__item">Катар</button>
+                <button class="countries-table__item">Кения</button>
+                <button class="countries-table__item">Кипр</button>
+                <button class="countries-table__item">Киргизия</button>
+                <button class="countries-table__item">Кирибати</button>
+                <button class="countries-table__item">Китай</button>
+                <button class="countries-table__item">Колумбия</button>
               </div>
             </div>
-            <div class="catalog__group">
-              <div class="traveler__ways  traveler-ways">
-                <h4 class="traveler-ways__title">Транспорт:</h4>
-                <div class="traveler-ways__list  ways">
-                  <span class="ways__link  ways__link--plane  ways__link--active">Самолет</span>
-                  <span class="ways__link  ways__link--bus  ways__link--active">Автобус</span>
-                  <span class="ways__link  ways__link--bicycle">Велосипед</span>
-                  <span class="ways__link  ways__link--afoot">Без транспорта</span>
-                </div>
-              </div>
-              <div class="traveler__level  level  level--traveler">
-                <span class="level__title  level__title--traveler">Левел:</span>
-                <span class="level__value  level__value--traveler">50</span>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Л</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Лаос</button>
+                <button class="countries-table__item">Латвия</button>
+                <button class="countries-table__item">Лесото</button>
+                <button class="countries-table__item">Либерия</button>
+                <button class="countries-table__item">Ливан</button>
+                <button class="countries-table__item">Ливия</button>
+                <button class="countries-table__item">Литва</button>
+                <button class="countries-table__item">Лихтенштейн</button>
+                <button class="countries-table__item">Люксембург</button>
               </div>
             </div>
-            <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
-          </article>
-        </div>
-        <div class="catalog__nav">
-          <button class="catalog__btn">Показать еще</button>
-          <div class="catalog__pagination  pagination">
-            <a class="pagination__link  pagination__link--back" href="#">Назад</a>
-            <a class="pagination__link  pagination__link--next" href="#">Вперед</a>
+          </div>
+          <div class="countries-table__row  countries-table__row--3">
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">М</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Маврикий</button>
+                <button class="countries-table__item">Мавритания</button>
+                <button class="countries-table__item">Мадагаскар</button>
+                <button class="countries-table__item">Малави</button>
+                <button class="countries-table__item">Малайзия</button>
+                <button class="countries-table__item">Мали</button>
+                <button class="countries-table__item">Мальдивы</button>
+                <button class="countries-table__item">Мальта</button>
+                <button class="countries-table__item">Марокко</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Н</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Намибия</button>
+                <button class="countries-table__item">Науру</button>
+                <button class="countries-table__item">Непал</button>
+                <button class="countries-table__item">Нигер</button>
+                <button class="countries-table__item">Нигерия</button>
+                <button class="countries-table__item">Нидерланды</button>
+                <button class="countries-table__item">Никарагуа</button>
+                <button class="countries-table__item">Новая Зеландия</button>
+                <button class="countries-table__item">Норвегия</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">О</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">ОАЭ</button>
+                <button class="countries-table__item">Оман</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">П</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Пакистан</button>
+                <button class="countries-table__item">Палау</button>
+                <button class="countries-table__item">Панама</button>
+                <button class="countries-table__item">Папуа - Новая Гвинея</button>
+                <button class="countries-table__item">Парагвай</button>
+                <button class="countries-table__item">Перу</button>
+                <button class="countries-table__item">Польша</button>
+                <button class="countries-table__item">Португалия</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Р</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Руанда</button>
+                <button class="countries-table__item">Румыния</button>
+                <button class="countries-table__item">Россия</button>
+              </div>
+            </div>
+          </div>
+          <div class="countries-table__row  countries-table__row--4">
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">С</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Сальвадор</button>
+                <button class="countries-table__item">Самоа</button>
+                <button class="countries-table__item">Сан-Марино</button>
+                <button class="countries-table__item">Саудовская Аравия</button>
+                <button class="countries-table__item">Сейшелы</button>
+                <button class="countries-table__item">Сенегал</button>
+                <button class="countries-table__item">Сербия</button>
+                <button class="countries-table__item">Сингапур</button>
+                <button class="countries-table__item">Сирия</button>
+                <button class="countries-table__item">Словакия</button>
+                <button class="countries-table__item">Словения</button>
+                <button class="countries-table__item">США</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Т</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Таджикистан</button>
+                <button class="countries-table__item">Таиланд</button>
+                <button class="countries-table__item">Танзания</button>
+                <button class="countries-table__item">Того</button>
+                <button class="countries-table__item">Тонга</button>
+                <button class="countries-table__item">Тринидад и Тобаго</button>
+                <button class="countries-table__item">Тувалу</button>
+                <button class="countries-table__item">Тунис</button>
+                <button class="countries-table__item">Туркмения</button>
+                <button class="countries-table__item">Турция</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">У</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Уганда</button>
+                <button class="countries-table__item">Узбекистан</button>
+                <button class="countries-table__item">Украина</button>
+                <button class="countries-table__item">Уругвай</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Ф</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Фиджи</button>
+                <button class="countries-table__item">Филиппины</button>
+                <button class="countries-table__item">Финляндия</button>
+                <button class="countries-table__item">Франция</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer">Х</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Хорватия</button>
+              </div>
+            </div>
+          </div>
+          <div class="countries-table__row  countries-table__row--5">
+            <div class="countries-table__col">
+              <div class="countries-table__pointer  countries-table__pointer--5">Ч</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Чад</button>
+                <button class="countries-table__item">Черногория</button>
+                <button class="countries-table__item">Чехия</button>
+                <button class="countries-table__item">Чили</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer  countries-table__pointer--5">Ш</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Швейцария</button>
+                <button class="countries-table__item">Швеция</button>
+                <button class="countries-table__item">Шри-Ланка</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer  countries-table__pointer--5">Э</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Эквадор</button>
+                <button class="countries-table__item">Эритрея</button>
+                <button class="countries-table__item">Эсватини</button>
+                <button class="countries-table__item">Эстония</button>
+                <button class="countries-table__item">Эфиопия</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer  countries-table__pointer--5">Ю</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">ЮАР</button>
+                <button class="countries-table__item">Южный Судан</button>
+              </div>
+            </div>
+            <div class="countries-table__col">
+              <div class="countries-table__pointer  countries-table__pointer--5">Я</div>
+              <div class="countries-table__list">
+                <button class="countries-table__item">Ямайка</button>
+                <button class="countries-table__item">Япония</button>
+              </div>
+            </div>
           </div>
         </div>
+        <button class="countries-table__btn">Свернуть</button>
       </div>
     </section>
+
+    <div class="page__group">
+      <div class="page__wrapper">
+        <section class="sorting-by-person">
+          <div class="sorting-by-person__wrapper">
+            <div class="sorting-by-person__content">
+              <h2 class="sorting-by-person__title">Подберите идеального попутчика</h2>
+              <form class="sorting-by-person__list" action="https://echo.htmlacademy.ru" method="post">
+                <div class="sorting-by-person__item  person-feature">
+                  <button class="person-feature__btn" type="button">Хобби<span class="person-feature__btn-expand">:</span></button>
+                  <div class="person-feature__list  person-feature__list--checkbox  person-feature__list--hobby">
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="gym" type="checkbox" name="gym" checked>
+                      <label class="person-feature__label" for="gym">Спортзал</label>
+                    </div>
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="hookah" type="checkbox" name="hookah">
+                      <label class="person-feature__label" for="hookah">Кальян</label>
+                    </div>
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="couch" type="checkbox" name="couch">
+                      <label class="person-feature__label" for="couch">Диван</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sorting-by-person__item  person-feature">
+                  <button class="person-feature__btn" type="button">Музыка<span class="person-feature__btn-expand">:</span></button>
+                  <div class="person-feature__list  person-feature__list--checkbox">
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="hard-rock" type="checkbox" name="hard-rock" checked>
+                      <label class="person-feature__label" for="hard-rock">Тяжелый рок</label>
+                    </div>
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="russian-rap" type="checkbox" name="russian-rap">
+                      <label class="person-feature__label" for="russian-rap">Русский рэп</label>
+                    </div>
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="eurodance" type="checkbox" name="eurodance">
+                      <label class="person-feature__label" for="eurodance">Евроденс</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sorting-by-person__item  sorting-by-person__item--food  person-feature">
+                  <button class="person-feature__btn" type="button">Еда<span class="person-feature__btn-expand">:</span></button>
+                  <div class="person-feature__list  person-feature__list--checkbox  person-feature__list--food">
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="meat" type="checkbox" name="meat" checked>
+                      <label class="person-feature__label" for="meat">Мясоед</label>
+                    </div>
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="pn" type="checkbox" name="pn">
+                      <label class="person-feature__label" for="pn">Сидит на ПП</label>
+                    </div>
+                    <div class="person-feature__item">
+                      <input class="person-feature__input  visually-hidden" id="vegan" type="checkbox" name="vegan">
+                      <label class="person-feature__label" for="vegan">Веган-сыроед</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sorting-by-person__item  sorting-by-person__item--vehicle  person-feature">
+                  <button class="person-feature__btn  person-feature__btn--vehicle" type="button">Транспорт<span class="person-feature__btn-expand">:</span></button>
+                  <div class="person-feature-ways__list">
+                    <div class="person-feature-ways__item">
+                      <input class="person-feature-ways__input  visually-hidden" id="plane" type="checkbox" name="plane" checked>
+                      <label class="person-feature-ways__label  person-feature-ways__label--plane" for="plane">Самолет</label>
+                    </div>
+                    <div class="person-feature-ways__item">
+                      <input class="person-feature-ways__input  visually-hidden" id="bus" type="checkbox" name="bus" checked>
+                      <label class="person-feature-ways__label  person-feature-ways__label--bus" for="bus">Автобус</label>
+                    </div>
+                    <div class="person-feature-ways__item">
+                      <input class="person-feature-ways__input  visually-hidden" id="bicycle" type="checkbox" name="bicycle">
+                      <label class="person-feature-ways__label  person-feature-ways__label--bicycle" for="bicycle">Велосипед</label>
+                    </div>
+                    <div class="person-feature-ways__item">
+                      <input class="person-feature-ways__input  visually-hidden" id="afoot" type="checkbox" name="afoot" checked>
+                      <label class="person-feature-ways__label  person-feature-ways__label--afoot" for="afoot">Без транспорта</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sorting-by-person__item  sorting-by-person__item--level  person-feature">
+                  <button class="person-feature__btn  person-feature__btn--level" type="button">Левел<span class="person-feature__btn-expand">:</span></button>
+                  <div class="person-feature__group  person-feature__group--range">
+                    <div class="range">
+                      <div class="range-fields">
+                        <input class="range-fields__input  range-fields__input--min" type="text" name="min-value" value="30">
+                        <input class="range-fields__input  range-fields__input--max" type="text" name="max-value" value="100">
+                      </div>
+                      <div class="range-controls">
+                        <div class="range-controls__scale">
+                          <div class="range-controls__bar" style="width: 70%"></div>
+                        </div>
+                        <div class="range-controls__toggle  range-controls__toggle--min" style="left: 30%">Минимальная цена</div>
+                        <div class="range-controls__toggle  range-controls__toggle--max" style="right: 0">Максимальная цена</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="sorting-by-person__btn" type="submit">Показать</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog">
+        <h2 class="visually-hidden">Каталог</h2>
+        <div class="catalog__wrapper">
+          <div class="catalog__list">
+            <article class="catalog__item  catalog__item--1  traveler">
+              <div class="traveler__meet">
+                <div class="traveler__photo">Таня Фирсова</div>
+                <h3 class="traveler__name">Таня Фирсова</h3>
+                <span class="traveler__status  status  status--offline">Офлайн</span>
+              </div>
+              <span class="traveler__popularity  traveler__popularity--active">1,5 М</span>
+              <p class="traveler__hashtags  hashtags  hashtags--catalog">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <div class="traveler__flags  traveler-countries">
+                <span class="traveler-countries__title">Хочет посетить:</span>
+                <div class="traveler-countries__list  flags  flags--traveler  flags--traveler-1">
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-lk">Шри-Ланка</span>
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-th">Таиланд</span>
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-sc">Сейшелы</span>
+                </div>
+              </div>
+              <div class="catalog__group  catalog__group--1">
+                <div class="traveler__ways  traveler-ways">
+                  <span class="traveler-ways__title">Транспорт:</span>
+                  <div class="traveler-ways__list  ways  ways--catalog">
+                    <span class="ways__link  ways__link--plane  ways__link--catalog  ways__link--catalog-plane  ways__link--active">Самолет</span>
+                    <span class="ways__link  ways__link--bus  ways__link--catalog  ways__link--catalog-bus">Автобус</span>
+                    <span class="ways__link  ways__link--bicycle  ways__link--catalog  ways__link--catalog-bicycle">Велосипед</span>
+                    <span class="ways__link  ways__link--afoot  ways__link--catalog  ways__link--catalog-afoot">Без транспорта</span>
+                  </div>
+                </div>
+                <div class="traveler__level  traveler-level">
+                  <span class="traveler-level__title">Левел:</span>
+                  <div class="traveler-level__group  level  level--catalog">
+                    <span class="level__value  level__value--catalog">99</span>
+                    <span class="level__header  level__header--catalog">Level</span>
+                  </div>
+                </div>
+              </div>
+              <button class="traveler__btn">Позвать!</button>
+            </article>
+            <article class="catalog__item  catalog__item--2  traveler">
+              <div class="traveler__meet">
+                <div class="traveler__photo">Петя Демин</div>
+                <h3 class="traveler__name">Петя Демин</h3>
+                <span class="traveler__status  status  status--offline">Офлайн</span>
+              </div>
+              <span class="traveler__popularity">1500</span>
+              <p class="traveler__hashtags  hashtags">#бургер #бар #футбол #концерт #крафт</p>
+              <div class="traveler__flags  traveler-countries">
+                <span class="traveler-countries__title">Хочет посетить:</span>
+                <div class="traveler-countries__list  flags  flags--traveler  flags--traveler-2">
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-be">Бельгия</span>
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-cz">Чехия</span>
+                </div>
+              </div>
+              <div class="catalog__group  catalog__group--2">
+                <div class="traveler__ways  traveler-ways">
+                  <span class="traveler-ways__title">Транспорт:</span>
+                  <div class="traveler-ways__list  ways  ways--catalog">
+                    <span class="ways__link  ways__link--plane  ways__link--catalog  ways__link--catalog-plane  ways__link--active">Самолет</span>
+                    <span class="ways__link  ways__link--bus  ways__link--catalog  ways__link--catalog-bus">Автобус</span>
+                    <span class="ways__link  ways__link--bicycle  ways__link--catalog  ways__link--catalog-bicycle">Велосипед</span>
+                    <span class="ways__link  ways__link--afoot  ways__link--catalog  ways__link--catalog-afoot">Без транспорта</span>
+                  </div>
+                </div>
+                <div class="traveler__level  traveler-level">
+                  <span class="traveler-level__title">Левел:</span>
+                  <div class="traveler-level__group  level  level--catalog">
+                    <span class="level__value  level__value--catalog">80</span>
+                    <span class="level__header  level__header--catalog">Level</span>
+                  </div>
+                </div>
+              </div>
+              <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
+            </article>
+            <article class="catalog__item  catalog__item--3  traveler">
+              <div class="traveler__meet">
+                <div class="traveler__photo">Марк Смолов</div>
+                <h3 class="traveler__name">Марк Смолов</h3>
+                <span class="traveler__status  status  status--offline">Офлайн</span>
+              </div>
+              <span class="traveler__popularity">170</span>
+              <p class="traveler__hashtags  hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+              <div class="traveler__flags  traveler-countries">
+                <span class="traveler-countries__title">Хочет посетить:</span>
+                <div class="traveler-countries__list  flags  flags--traveler  flags--traveler-3">
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-us">США</span>
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-au">Австралия</span>
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-dm">Доминика</span>
+                </div>
+              </div>
+              <div class="catalog__group  catalog__group--3">
+                <div class="traveler__ways  traveler-ways">
+                  <span class="traveler-ways__title">Транспорт:</span>
+                  <div class="traveler-ways__list  ways  ways--catalog">
+                    <span class="ways__link  ways__link--plane  ways__link--catalog  ways__link--catalog-plane  ways__link--active">Самолет</span>
+                    <span class="ways__link  ways__link--bus  ways__link--catalog  ways__link--catalog-bus">Автобус</span>
+                    <span class="ways__link  ways__link--bicycle  ways__link--catalog  ways__link--catalog-bicycle">Велосипед</span>
+                    <span class="ways__link  ways__link--afoot  ways__link--catalog  ways__link--catalog-afoot">Без транспорта</span>
+                  </div>
+                </div>
+                <div class="traveler__level  traveler-level">
+                  <span class="traveler-level__title">Левел:</span>
+                  <div class="traveler-level__group  level  level--catalog">
+                    <span class="level__value  level__value--catalog">25</span>
+                    <span class="level__header  level__header--catalog">Level</span>
+                  </div>
+                </div>
+              </div>
+              <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
+            </article>
+            <article class="catalog__item  catalog__item--4  traveler">
+              <div class="traveler__meet">
+                <div class="traveler__photo">Лариса Роговая</div>
+                <h3 class="traveler__name">Лариса Роговая</h3>
+                <span class="traveler__status  status  status--online">Онлайн</span>
+              </div>
+              <span class="traveler__popularity">23</span>
+              <p class="traveler__hashtags  hashtags">#образование #карьера #учеба #линкедин</p>
+              <div class="traveler__flags  traveler-countries">
+                <span class="traveler-countries__title">Хочет посетить:</span>
+                <div class="traveler-countries__list  flags  flags--traveler  flags--traveler-4">
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-uk">Великобритания</span>
+                  <span class="flags__link  flags__link--traveler  flags__link--traveler-de">Германия</span>
+                </div>
+              </div>
+              <div class="catalog__group  catalog__group--4">
+                <div class="traveler__ways  traveler-ways">
+                  <span class="traveler-ways__title">Транспорт:</span>
+                  <div class="traveler-ways__list  ways  ways--catalog">
+                    <span class="ways__link  ways__link--plane  ways__link--catalog  ways__link--catalog-plane  ways__link--active">Самолет</span>
+                    <span class="ways__link  ways__link--bus  ways__link--catalog  ways__link--catalog-bus">Автобус</span>
+                    <span class="ways__link  ways__link--bicycle  ways__link--catalog  ways__link--catalog-bicycle">Велосипед</span>
+                    <span class="ways__link  ways__link--afoot  ways__link--catalog  ways__link--catalog-afoot">Без транспорта</span>
+                  </div>
+                </div>
+                <div class="traveler__level  traveler-level">
+                  <span class="traveler-level__title">Левел:</span>
+                  <div class="traveler-level__group  level  level--catalog">
+                    <span class="level__value  level__value--catalog">50</span>
+                    <span class="level__header  level__header--catalog">Level</span>
+                  </div>
+                </div>
+              </div>
+              <button class="traveler__btn  btn  btn--traveler">Позвать!</button>
+            </article>
+          </div>
+          <div class="catalog__nav">
+            <button class="catalog__btn">Показать еще</button>
+            <div class="catalog__pagination  pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item"><a class="pagination__page-link  pagination__page-link--current" href="#">1</a></li>
+                <li class="pagination__item"><a class="pagination__page-link" href="#">2</a></li>
+                <li class="pagination__item"><a class="pagination__page-link" href="#">3</a></li>
+                <li class="pagination__item"><a class="pagination__page-link" href="#">4</a></li>
+              </ul>
+              <div class="pagination__group">
+                <a class="pagination__link  pagination__link--back" href="#">Назад</a>
+                <a class="pagination__link  pagination__link--next" href="#">Вперед</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div>
   </main>
 
   <footer class="page-footer">

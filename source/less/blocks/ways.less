@@ -1,40 +1,138 @@
 .ways {
   display: flex;
   justify-content: center;
+  padding: 0 3px;
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+    }
+  }
 }
 
 .ways__link {
+  position: relative;
   display: block;
-  width: 20px;
-  height: 20px;
-  margin-right: 13px;
+  width: 32px;
+  height: 32px;
+  margin-right: 1px;
   font-size: 0;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 105%;
-  opacity: 0.15;
+  border-radius: 50%;
 
   &:last-child {
     margin-right: 0;
   }
 
-  &--plane {
-    background-image: url("../img/plane.svg");
-  }
-
-  &--bus {
-    background-image: url("../img/bus.svg");
-  }
-
-  &--bicycle {
-    background-image: url("../img/bicycle.svg");
-  }
-
-  &--afoot {
-    background-image: url("../img/afoot.svg");
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    opacity: 0.15;
   }
 
   &--active {
-    opacity: 1;
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &--index {
+    &::before {
+      background-size: 60%;
+    }
+  }
+
+  &--catalog {
+    background-color: @basic_blue_light;
+
+    @media (min-width: @tablet-width) {
+      background-color: transparent;
+    }
+  }
+
+  &--plane {
+    &::before {
+      background-image: url("../img/plane.svg");
+    }
+  }
+
+  &--index-plane {
+    &::before {
+      background-size: 65%;
+    }
+  }
+
+  &--catalog-plane {
+    &::before {
+      @media (min-width: @tablet-width) {
+        background-size: 70%;
+      }
+    }
+  }
+
+  &--bus {
+    &::before {
+      background-image: url("../img/bus.svg");
+    }
+  }
+
+  &--catalog-bus {
+    &::before {
+      @media (min-width: @tablet-width) {
+        background-size: 65%;
+      }
+    }
+  }
+
+  &--bicycle {
+    &::before {
+      background-image: url("../img/bicycle.svg");
+    }
+  }
+
+  &--index-bicycle {
+    &::before {
+      background-size: 75%;
+    }
+  }
+
+  &--catalog-bicycle {
+    &::before {
+      @media (min-width: @tablet-width) {
+        background-size: 80%;
+      }
+    }
+  }
+
+  &--afoot {
+    &::before {
+      background-image: url("../img/afoot.svg");
+    }
+  }
+
+  &--index-afoot {
+    &::before {
+      background-size: 75%;
+    }
+  }
+
+  &--catalog-afoot {
+    &::before {
+      @media (min-width: @tablet-width) {
+        background-size: 75%;
+      }
+    }
   }
 }

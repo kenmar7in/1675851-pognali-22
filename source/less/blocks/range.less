@@ -1,7 +1,21 @@
+.range {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
 .range-fields {
   position: relative;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  padding-top: 2px;
 
   &::before {
     content: "";
@@ -12,20 +26,40 @@
     width: 1px;
     background-color: @noname_grey_4;
   }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
 }
 
 .range-fields__input {
   box-sizing: border-box;
   width: 50%;
-  padding: 7px;
+  padding: 8px;
   font-family: @main-font;
   font-weight: 500;
   font-size: 14px;
   line-height: 13px;
   letter-spacing: 0.06em;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
   text-align: center;
   border: 1px solid @noname_grey_4;
+
+  @media (min-width: @tablet-width) {
+    width: 74px;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
 
   &--min {
     border-right: none;
@@ -45,7 +79,18 @@
 
 .range-controls {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    width: 282px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+    width: 100%;
+  }
 }
 
 .range-controls__scale {
@@ -53,13 +98,21 @@
   width: 100%;
   height: 2px;
   background-color: @basic_blue_dark_20;
+
+  @media (min-width: @tablet-width) {
+    height: 3px;
+  }
 }
 
 .range-controls__bar {
   position: absolute;
   right: 0;
   height: 2px;
-  background-color: @basic_blue_light;
+  background-color: @basic_blue_dark;
+
+  @media (min-width: @tablet-width) {
+    height: 3px;
+  }
 }
 
 .range-controls__toggle {
@@ -67,16 +120,29 @@
   width: 10px;
   height: 10px;
   font-size: 0;
-  background-color: @basic_blue_light;
+  background-color: @basic_blue_dark;
   border-radius: 50%;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    width: 13px;
+    height: 13px;
+  }
+
   &--min {
     top: -4px;
+
+    @media (min-width: @tablet-width) {
+      top: -5px;
+    }
   }
 
   &--max {
     top: -4px;
     right: 0;
+
+    @media (min-width: @tablet-width) {
+      top: -5px;
+    }
   }
 }

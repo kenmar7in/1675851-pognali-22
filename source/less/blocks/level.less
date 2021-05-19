@@ -1,139 +1,128 @@
 .level {
   box-sizing: border-box;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  background-color: @basic_black_60;
-  border: 4px solid @special_orange;
+  text-align: center;
   border-radius: 50%;
+  border-style: solid;
+  border-color: @special_orange;
 
-  &--account {
-    box-sizing: border-box;
+  &--index {
+    width: 60px;
+    height: 60px;
+    padding-top: 9px;
+    border-width: 4px;
+    background-color: @basic_black_60;
+  }
+
+  &--form {
     width: 100px;
     height: 100px;
-    background-color: transparent;
-    border: 3px solid @special_orange;
+    padding-top: 13px;
+    border-width: 3px;
 
     @media (min-width: @tablet-width) {
       width: 94px;
       height: 94px;
+      padding-top: 15px;
     }
 
     @media (min-width: @desktop-width) {
       position: absolute;
-      top: -212px;
-      right: 330px;
-      z-index: 2;
+      top: 42px;
+      right: 424px;
+      width: 95px;
+      height: 95px;
+      padding-top: 17px;
     }
   }
 
-  &--traveler {
-    width: auto;
-    height: auto;
-    border: none;
-    background-color: transparent;
-    border-radius: none;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 1px;
-    background-color: @basic_white;
-    opacity: 0.3;
-  }
-
-  &--account::before {
-    top: 57%;
-    width: 50px;
-    background-color: @basic_blue;
+  &--catalog {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    padding-top: 8px;
+    border-width: 3px;
 
     @media (min-width: @tablet-width) {
-      top: 60%;
-      width: 48px;
-    }
-
-    @media (min-width: @desktop-width) {
-      background-color: @basic_white;
+      width: 60px;
+      height: 60px;
+      padding-top: 9px;
     }
   }
 }
 
 .level__value {
-  transform: translateY(2px);
-  order: -1;
+  display: block;
   font-family: @main-font;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  color: @basic_white;
 
-  &--account {
-    margin-bottom: 16px;
+  &--index {
+    margin-bottom: 1px;
+    font-size: 24px;
+    line-height: 24px;
+    color: @basic_white;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &--form {
+    margin-bottom: 8px;
     font-size: 38px;
     line-height: 38px;
     color: @basic_blue;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     @media (min-width: @desktop-width) {
+      margin-bottom: 6px;
       color: @basic_white;
     }
   }
 
-  &--traveler {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    order: 0;
-    margin-bottom: 0;
-    width: 45px;
-    height: 45px;
-    color: @basic_blue_light;
-    border: 3px solid @special_orange;
-    border-radius: 50%;
+  &--catalog {
+    font-size: 24px;
+    line-height: 24px;
+    color: @basic_blue_dark;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 3px;
+    }
   }
 }
 
-.level__title {
-  transform: translateY(4px);
+.level__header {
+  display: block;
   font-family: @main-font;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  color: @basic_white;
   text-transform: lowercase;
 
-  &--account {
-    transform: translateY(-5px);
+  &--index {
+    font-size: 14px;
+    line-height: 14px;
+    color: @basic_white;
+  }
+
+  &--form {
     font-size: 18px;
     line-height: 18px;
-    color: @basic_blue;
-
-    @media (min-width: @tablet-width) {
-      transform: none;
-    }
+    color: @special_grey;
 
     @media (min-width: @desktop-width) {
       color: @basic_white;
     }
   }
 
-  &--traveler {
-    margin-bottom: 10px;
-    font-size: 15px;
-    line-height: 16px;
-    color: @special_grey;
+  &--catalog {
+    display: none;
+    font-size: 14px;
+    line-height: 14px;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      color: @basic_black_40;
+    }
   }
 }

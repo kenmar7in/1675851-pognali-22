@@ -1,61 +1,180 @@
 .traveler {
-  position: relative;
+  position: relative; /* .traveler__status */
+}
+
+.traveler__meet {
+  display: flex;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    align-items: flex-start;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+  }
 }
 
 .traveler__photo {
-  margin-bottom: 13px;
+  width: 70px;
+  height: 70px;
+  margin: 2px 16px 0 0;
   border-radius: 50%;
+  background-color: @temp;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+    height: 190px;
+    margin: 2px 33px 0 0;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 285px;
+    height: 285px;
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+  }
 }
 
 .traveler__name {
+  width: 80px;
   margin: 0;
-  margin-bottom: 8px;
   font-family: @main-font;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-right: 23px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 44px;
+    left: 347px;
+  }
 }
 
 .traveler__status {
   position: absolute;
   top: 22px;
   right: 22px;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    margin-top: 12px;
+  }
 }
 
 .traveler__popularity {
+  position: absolute; /* .traveler */
+  top: 62px;
+  left: 104px;
   display: block;
-  margin-bottom: 20px;
   font-family: @main-font;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
   color: @basic_blue;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -36px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: @noname_blue_6;
+    background-image: url("../img/like.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: -15px;
+      left: -56px;
+      width: 50px;
+      height: 50px;
+      background-size: 44%;
+    }
+  }
+
+  &--active {
+    &::before {
+      background-color: @noname_red_3;
+      background-image: url("../img/like-active.svg");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 189px;
+    left: 461px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 202px;
+    left: 545px;
+  }
 }
 
 .traveler__hashtags {
   width: 180px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+  padding: 0 8px;
   font-family: @main-font;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 82px;
+    left: 253px;
+    width: 230px;
+    font-size: 20px;
+    line-height: 23px;
+    color: @basic_black;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 95px;
+    left: 347px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .traveler__ways {
-  margin-right: 10px;
-}
+  @media (min-width: @tablet-width) {
+    margin-bottom: 7px;
+  }
 
-.traveler__level {
-  margin-bottom: 14px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-right: 45px;
+  }
 }
 
 .traveler__btn {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: 12px;
+  padding: 13px 12px 11px 12px;
   font-family: @main-font;
   font-weight: 700;
   font-size: 17px;
@@ -67,4 +186,20 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 174px;
+    left: 254px;
+    width: 150px;
+    padding: 16px 12px 14px 12px;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 187px;
+    left: 339px;
+  }
 }
