@@ -2,6 +2,17 @@
   position: relative;
   display: flex;
 
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    background-color: @basic_white;
+    border-radius: 20px;
+    padding: 0 18px 0 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 24px 0 29px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -10,20 +21,73 @@
     width: 1px;
     height: 100%;
     background-color: @basic_blue_light;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.pagination__list {
+  list-style: none;
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.pagination__page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-family: @main-font;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: @basic_white;
+
+  &--current {
+    background-color: @basic_yellow;
+  }
+}
+
+.pagination__group {
+  display: flex;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
   }
 }
 
 .pagination__link {
+  display: block;
   width: 50%;
-  height: 50px;
+  height: 52px;
   background-color: @basic_white;
   font-size: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+    height: 100px;
+  }
 
   &--back {
+    background-image: url("../img/travelers-prev.svg");
     border-radius: 20px 0 0 20px;
   }
 
   &--next {
+    background-image: url("../img/travelers-next.svg");
     border-radius: 0 20px 20px 0;
   }
 }

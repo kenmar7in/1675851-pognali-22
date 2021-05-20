@@ -1,9 +1,16 @@
 .traveler-ways__title {
+  display: inline-block;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
+  padding: 0 9px;
   font-family: @main-font;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   text-transform: lowercase;
+  background-color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

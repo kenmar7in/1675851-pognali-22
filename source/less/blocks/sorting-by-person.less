@@ -2,27 +2,125 @@
   padding-top: 21px;
   padding-bottom: 28px;
   background-color: @basic_blue_light;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 41px;
+  }
 }
 
 .sorting-by-person__wrapper {
   .container;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
 }
 
 .sorting-by-person__title {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   font-family: @main-font;
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
   letter-spacing: 0.02em;
-  color: @basic_blue_light;
+  color: @basic_blue_dark;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
 }
 
 .sorting-by-person__content {
-  padding: 26px 25px 22px;
+  padding: 25px 25px 22px;
   background-color: @basic_yellow;
   border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 35px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    width: 285px;
+    padding: 44px 46px 48px 48px;
+  }
+}
+
+.sorting-by-person__list {
+  @media (min-width: @tablet-width) {
+    padding-top: 37px;
+    border-top: 1px solid @noname_orange_2;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.sorting-by-person__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-bottom: 19px;
+  }
+
+  &--food {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 27px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--vehicle {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 11px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &--level {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      margin: 0;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid @noname_orange_2;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      margin: 0;
+      margin-bottom: 27px;
+      padding-bottom: 16px;
+      border-bottom: none;
+    }
+  }
 }
 
 .sorting-by-person__btn {
@@ -41,4 +139,16 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 16px 14px 13px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 22px;
+  }
 }

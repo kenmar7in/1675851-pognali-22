@@ -1,5 +1,56 @@
 .flags {
   display: flex;
+
+  &--traveler {
+    flex-direction: column;
+    margin: 0;
+    padding-top: 3px;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: 50px;
+      left: 672px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &--traveler-1 {
+    padding-bottom: 11px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--traveler-2 {
+    padding-bottom: 16px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--traveler-3 {
+    padding-bottom: 13px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--traveler-4 {
+    padding-bottom: 17px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .flags__link {
@@ -15,6 +66,7 @@
   color: @basic_blue_light;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: cover;
 
   &--countries-card {
     @media (min-width: @tablet-width) {
@@ -50,5 +102,120 @@
 
   &--be {
     background-image: url("../img/be.svg");
+  }
+
+  &--traveler {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-bottom: 12px;
+    padding-left: 47px;
+    font-size: 15px;
+    color: @basic_blue_dark;
+    background: none;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      margin-right: 24px;
+      padding-left: 48px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+      margin-bottom: 16px;
+      padding-left: 56px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      left: 7px;
+      display: block;
+      width: 26px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+
+      @media (min-width: @tablet-width) {
+        width: 35px;
+        height: 24px;
+        left: 2px;
+      }
+    }
+
+    &-th {
+      &::before {
+        background-image: url("../img/th.svg");
+      }
+    }
+
+    &-fr {
+      &::before {
+        background-image: url("../img/fr.svg");
+      }
+    }
+
+    &-cz {
+      &::before {
+        background-image: url("../img/cz.svg");
+      }
+    }
+
+    &-lk {
+      &::before {
+        background-image: url("../img/lk.svg");
+      }
+    }
+
+    &-sc {
+      &::before {
+        background-image: url("../img/sc.svg");
+      }
+    }
+
+    &-be {
+      &::before {
+        background-image: url("../img/be.svg");
+      }
+    }
+
+    &-us {
+      &::before {
+        background-image: url("../img/us.svg");
+      }
+    }
+
+    &-au {
+      &::before {
+        background-image: url("../img/au.svg");
+      }
+    }
+
+    &-dm {
+      &::before {
+        background-image: url("../img/dm.svg");
+      }
+    }
+
+    &-uk {
+      &::before {
+        background-image: url("../img/uk.svg");
+      }
+    }
+
+    &-de {
+      &::before {
+        background-image: url("../img/de.svg");
+      }
+    }
   }
 }
